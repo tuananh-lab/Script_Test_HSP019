@@ -16,7 +16,6 @@ STATUS_CAMERA_OK="camera ok"
 # Define logging function
 log() {
     echo "$1"
-    echo "$1"
 }
 
 # Define function to check if a file exists
@@ -76,12 +75,15 @@ test_imx477() {
 log "Select camera module to test:"
 log "1. IMX219"
 log "2. IMX477"
-read -p "Enter your choice (1-2): " choice
+log "3. Exit"
+read -p "Enter your choice (1-3): " choice
 
 case $choice in
     1) test_imx219 ;;
     2) test_imx477 ;;
-    *) log "Invalid choice. Please select 1 or 2." ;;
+    3) log "Exiting..."; exit 0 ;;
+    *) log "Invalid choice. Please select 1, 2, or 3." ;;
 esac
 
 log "Camera test done"
+exit $result
