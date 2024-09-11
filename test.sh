@@ -8,6 +8,9 @@ scripts_dir="${current_dir}/remote/scripts"
 . ${current_dir}/common/common.sh
 . ${current_dir}/error/error.sh
 
+# Set executable permission for all scripts in the scripts directory
+chmod +x ${scripts_dir}/*.sh
+
 # Main script
 echo "Select a function to test:"
 echo "1. Power Button"

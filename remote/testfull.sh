@@ -11,6 +11,9 @@ current_dir="$(cd "$(dirname "$0")" && pwd)"
 export log_file="${current_dir}/remote_test.log"
 echo -n "" > $log_file
 
+# Ensure all scripts have executable permissions
+chmod +x ${current_dir}/scripts/*.sh
+
 # Function to run each test and add a line separator
 run_test() {
     script_path="$1"
