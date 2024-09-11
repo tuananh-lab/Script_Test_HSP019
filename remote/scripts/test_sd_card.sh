@@ -36,7 +36,6 @@ else
     else
         log "SD Device Information:"
         log "$sd_info"
-        echo "SD_DEVICE_OK: $sd_info"
     fi
 fi
 
