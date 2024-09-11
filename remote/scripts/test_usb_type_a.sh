@@ -11,35 +11,26 @@ log() {
     echo "$1"
 }
 
-# Function to check USB ports
-check_usb_ports() {
-    port_number=$1
+# Function to display USB information for all ports
+display_usb_info() {
+    log "Displaying USB information for all ports"
 
-    log "Checking Port $port_number"
-
-    # Run 'lsusb -t' and filter for the specific port
-    usb_info=$(lsusb -t | grep "Port $port_number:")
+    # Run 'lsusb -t' to get detailed USB device information
+    usb_info=$(lsusb -t)
 
     if [ -z "$usb_info" ]; then
-        log "Port $port_number: No information found."
+        log "No USB information found."
         result=1
     else
-        log "Port $port_number: $usb_info"
+        log "$usb_info"
     fi
 }
 
 # Start testing
 log "Testing USB TYPE-A (4 ports)"
 
-# Test each port
-for port in {1..4}; do
-    # Wait for user to connect the device
-    log "Please connect a USB device to Port $port and press Enter."
-    read -r
-
-    # Check USB ports for the specified port number
-    check_usb_ports $port
-done
+# Display USB information
+display_usb_info
 
 log "USB TYPE-A (4 ports) test done"
 exit $result
