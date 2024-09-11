@@ -20,7 +20,7 @@ The `Test_HSP019` directory provides scripts and resources necessary to test the
 - **`test.sh`**: The main executable file you will use to test functions.
 
 ## Usage Instructions
-
+### I. Test Each Function
 1. Open the terminal and navigate to the directory containing the `test.sh` file:
 
     ```bash
@@ -89,8 +89,49 @@ Select a function to test:
     Total Memory: 7.1Gi 
     RAM test done
 
-
 You just need to select the function you want to test by entering the corresponding number.
+
+
+### II. Test Full Function
+
+1. Navigate to the `remote` directory:
+
+    ```bash
+    cd /home/Test_HSP019/remote
+    ```
+
+2. Grant execution permission to the `testfull.sh` file:
+
+    ```bash
+    chmod +x testfull.sh
+    ```
+
+3. Run the `testfull.sh` file:
+
+    ```bash
+    ./testfull.sh
+    ```
+
+
+## Function List
+
+- **Power Button**: Tests the functionality of the power button.
+- **Serial Port**: Checks the operation of the serial port.
+- **RAM**: Tests the system memory.
+- **ROM**: Verifies the read-only memory.
+- **USB HUB 3.0**: Tests the USB hub functionality.
+- **USB TYPE-A (4 ports)**: Checks the four TYPE-A USB ports.
+- **SD Card**: Tests the SD card slot.
+- **Factory Reset Button**: Verifies the factory reset functionality.
+- **NVMe**: Tests the NVMe storage.
+- **RTC**: Checks the real-time clock.
+- **LTE 4G**: Tests the LTE 4G connectivity.
+- **LAN7800**: Verifies the LAN7800 Ethernet functionality.
+- **Alarm IO**: Tests the alarm input/output.
+- **DP (Display Port)**: Checks the Display Port functionality.
+- **GPIO**: Tests the general-purpose input/output pins.
+- **Camera**: Verifies the operation of the camera.
+
 
 ## Notes When Testing Functions
 
