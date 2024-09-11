@@ -16,7 +16,7 @@ The `Test_HSP019` directory provides scripts and resources necessary to test the
 - **`asset/`**: Contains images related to function testing.
 - **`common/`**: Contains the `common.sh` file, defining shared macros used during testing.
 - **`error/`**: Contains the `error.sh` file, defining macros related to errors during testing.
-- **`remote/`**: Contains scripts used to test specific functions.
+- **`remote/`**: Contains scripts used to test specific functions and file `testfull.sh` to check full function if you want
 - **`test.sh`**: The main executable file you will use to test functions.
 
 ## Usage Instructions
