@@ -144,6 +144,7 @@ Some functions require a combination of running the script and performing physic
 
 - **USB TYPE-A**: Insert USB 2.0 and 3.0 drives into the 4 TYPE-A ports and check the results on the terminal.
 - **SD Card**: Insert an SD card into the slot and check the results on the terminal.
+- **NVMe**: Insert an SSD NVMe hard disk into the slot and check the results on the terminal.
 - **Factory Reset Button**: Run the script, press the button, and check the results on the terminal.
 - **Alarm IO**: When running the script, you will hear the relay click on/off.
 - **GPIO**: Run the script and measure the voltage on pins 2, 3, 4, and 5 of J1101 to check if it reaches 1.8V.
