@@ -16,102 +16,101 @@ The `Test_HSP019` directory provides scripts and resources necessary to test the
 - **`asset/`**: Contains images related to function testing.
 - **`common/`**: Contains the `common.sh` file, defining shared macros used during testing.
 - **`error/`**: Contains the `error.sh` file, defining macros related to errors during testing.
-- **`remote/`**: Contains scripts used to test specific functions and file `testfull.sh` to check full function if you want
+- **`remote/`**: Contains scripts used to test specific functions and the file `testfull.sh` to check all functions.
 - **`test.sh`**: The main executable file you will use to test functions.
 
 ## Usage Instructions
-### I. Test Each Function
-1. Open the terminal and navigate to the directory containing the `test.sh` file:
 
+### I. Test Each Function
+
+1. **Access the box via SSH using its IP address:**
     ```bash
-    cd /home/Test_HSP019
+    ssh IP_of_box
     ```
 
-2. Grant execution permission to the `test.sh` file:
+2. **Navigate to the directory containing the `test.sh` file:**
+    ```bash
+    cd /dir/Test_HSP019
+    ```
 
+3. **Grant execution permission to the `test.sh` file:**
     ```bash
     chmod +x test.sh
     ```
 
-3. Run the `test.sh` file:
-
+4. **Run the `test.sh` file:**
     ```bash
     ./test.sh
     ```
 
-After running the executable file, you will see the following list of functions:
+   After running the executable file, you will see a list of functions to test:
 
-    1.Power Button
-    2.Serial Port
-    3.RAM
-    4.ROM
-    5.USB HUB 3.0
-    6.USB TYPE-A (4 ports)
-    7.SD Card
-    8.Factory Reset Button
-    9.NVMe
-    10.RTC
-    11.LTE 4G
-    12.LAN7800
-    13.Alarm IO
-    14.DP(Display Port)
-    15.GPIO
-    16.Camera
-    17.Exit
+    ```
+    1. Power Button
+    2. Serial Port
+    3. RAM
+    4. ROM
+    5. USB HUB 3.0
+    6. USB TYPE-A (4 ports)
+    7. SD Card
+    8. Factory Reset Button
+    9. NVMe
+    10. RTC
+    11. LTE 4G
+    12. LAN7800
+    13. Alarm IO
+    14. DP (Display Port)
+    15. GPIO
+    16. Camera
+    17. Exit
+    ```
+
     Enter your choice (1-17):
-
-
-## Example Result When Testing RAM
-
-When you choose the RAM test function, you will see the following result:
-
-Select a function to test:
-
-    1.Power Button
-    2.Serial Port
-    3.RAM
-    4.ROM
-    5.USB HUB 3.0
-    6.USB TYPE-A (4 ports)
-    7.SD Card
-    8.Factory Reset Button
-    9.NVMe
-    10.RTC
-    11.LTE 4G
-    12.LAN7800
-    13.Alarm IO
-    14.DP(Display Port)
-    15.GPIO
-    16.Camera
-    17.Exit 
-    Enter your choice (1-17): 3 
-    Testing RAM 
-    Total Memory: 7.1Gi 
-    RAM test done
-
-You just need to select the function you want to test by entering the corresponding number.
-
 
 ### II. Test Full Function
 
-1. Navigate to the `remote` directory:
-
+1. **Access the box via SSH using its IP address:**
     ```bash
-    cd /home/Test_HSP019/remote
+    ssh IP_of_box
     ```
 
-2. Grant execution permission to the `testfull.sh` file:
+2. **Navigate to the `remote` directory:**
+    ```bash
+    cd /dir/Test_HSP019/remote
+    ```
 
+3. **Grant execution permission to the `testfull.sh` file:**
     ```bash
     chmod +x testfull.sh
     ```
 
-3. Run the `testfull.sh` file:
-
+4. **Run the `testfull.sh` file:**
     ```bash
     ./testfull.sh
     ```
 
+### III. Test Remotely Through Box IP Address
+
+1. **Install `sshpass`:**
+    ```bash
+    sudo apt update
+    sudo apt install sshpass
+    ```
+
+2. **Navigate to the directory containing the `remote_test.sh` file:**
+    ```bash
+    cd /dir/Test_HSP019
+    ```
+
+3. **Grant execution permission to the `remote_test.sh` file:**
+    ```bash
+    chmod +x remote_test.sh
+    ```
+
+4. **Run the `remote_test.sh` file with the IP address of the box:**
+    ```bash
+    ./remote_test.sh IP_of_box
+    ```
 
 ## Function List
 
@@ -132,7 +131,6 @@ You just need to select the function you want to test by entering the correspond
 - **GPIO**: Tests the general-purpose input/output pins.
 - **Camera**: Verifies the operation of the camera.
 
-
 ## Notes When Testing Functions
 
 Some functions cannot be verified through scripts alone and require physical actions:
@@ -148,12 +146,8 @@ Some functions require a combination of running the script and performing physic
 - **Factory Reset Button**: Run the script, press the button, and check the results on the terminal.
 - **Alarm IO**: When running the script, you will hear the relay click on/off.
 - **GPIO**: Run the script and measure the voltage on pins 2, 3, 4, and 5 of J1101 to check if it reaches 1.8V.
-- **Camera**:You will first select the type of camera to test, then choose between two modes: View Camera on Screen or Record Stream.
-
-    View Mode: To view the camera feed, ensure you have a display port connected. The camera output will be shown on the screen.
-
-    Record Mode: In this mode, the recorded MP4 file will be stored in the /data directory on the board. You can play this MP4 file using VLC, ffplay, or any other media player to verify the recording.
+- **Camera**: You will first select the type of camera to test, then choose between two modes: View Camera on Screen or Record Stream.
+    - **View Mode**: To view the camera feed, ensure you have a display port connected. The camera output will be shown on the screen.
+    - **Record Mode**: In this mode, the recorded MP4 file will be stored in the `/data` directory on the board. You can play this MP4 file using VLC, `ffplay`, or any other media player to verify the recording.
 
 Make sure to perform the testing steps accurately to ensure the AIBOX functions operate as required.
-
-
