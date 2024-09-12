@@ -66,6 +66,35 @@ The `Test_HSP019` directory provides scripts and resources necessary to test the
     ```
 
     Enter your choice (1-17):
+## Example Result When Testing RAM
+
+When you choose the RAM test function, you will see the following result:
+
+Select a function to test:
+
+    1.Power Button
+    2.Serial Port
+    3.RAM
+    4.ROM
+    5.USB HUB 3.0
+    6.USB TYPE-A (4 ports)
+    7.SD Card
+    8.Factory Reset Button
+    9.NVMe
+    10.RTC
+    11.LTE 4G
+    12.LAN7800
+    13.Alarm IO
+    14.DP(Display Port)
+    15.GPIO
+    16.Camera
+    17.Exit 
+    Enter your choice (1-17): 3 
+    Testing RAM 
+    Total Memory: 7.1Gi 
+    RAM test done
+
+You just need to select the function you want to test by entering the corresponding number.
 
 ### II. Test Full Function
 
