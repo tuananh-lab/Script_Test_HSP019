@@ -147,7 +147,11 @@ Some functions require a combination of running the script and performing physic
 - **Factory Reset Button**: Run the script, press the button, and check the results on the terminal.
 - **Alarm IO**: When running the script, you will hear the relay click on/off.
 - **GPIO**: Run the script and measure the voltage on pins 2, 3, 4, and 5 of J1101 to check if it reaches 1.8V.
-- **Camera**: Plug in the IMX219 or IMX477 camera and check the results on the terminal.
+- **Camera**:You will first select the type of camera to test, then choose between two modes: View Camera on Screen or Record Stream.
+
+    View Mode: To view the camera feed, ensure you have a display port connected. The camera output will be shown on the screen.
+
+    Record Mode: In this mode, the recorded MP4 file will be stored in the /data directory on the board. You can play this MP4 file using VLC, ffplay, or any other media player to verify the recording.
 
 Make sure to perform the testing steps accurately to ensure the AIBOX functions operate as required.
 
