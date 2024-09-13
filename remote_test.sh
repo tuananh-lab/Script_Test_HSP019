@@ -3,6 +3,7 @@
 # Log file path (change this to your desired log file)
 export log_file="remote_test.log"
 
+current_dir="$(cd "$(dirname "$0")" && pwd)"
 # Add libs
 . common/common.sh
 . error/error.sh

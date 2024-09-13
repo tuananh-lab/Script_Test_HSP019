@@ -5,11 +5,8 @@ log() {
     local log_msg="$1"
     local timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
 
-    # Print the message to the console (optional)
+    # Print the message to the console
     echo "[$timestamp] $log_msg"
-
-    # Append the message to the log file
-    echo "[$timestamp] $log_msg" >> "$log_file"
 }
 
 logcat() {
@@ -21,11 +18,8 @@ logcat() {
 
     # Use echo and command substitution to iterate through lines
     while IFS= read -r line; do
-        # Print the message to the console (optional)
+        # Print the message to the console
         echo "[$timestamp] $line"
-
-        # Append the message to the log file
-        echo "[$timestamp] $line" >> "$log_file"
     done <<< "$cat_output"
 }
 
