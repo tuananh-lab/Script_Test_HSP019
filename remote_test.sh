@@ -105,20 +105,20 @@ esac
 check_script "$script"
 
 # Execute the selected script remotely using sshpass and capture the output
-log "Executing $script on $box_ip..."
+# log "Executing $script on $box_ip..."
 
 remote_output=$(echo "$password" | sshpass -p "$password" ssh root@$box_ip "bash -s" < "$script" 2>&1)
 result=$?
 
 # Log the output of the remote execution
-log "Remote execution output:"
+# log "Remote execution output:"
 log "$remote_output"
 
 # Log the result of the remote execution
-if [ $result -eq 0 ]; then
-    log "Remote script executed successfully."
-else
-    log "Remote script execution failed with exit code $result."
-fi
+# if [ $result -eq 0 ]; then
+#     log "Remote script executed successfully."
+# else
+#     log "Remote script execution failed with exit code $result."
+# fi
 
 exit $result

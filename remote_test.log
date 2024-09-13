@@ -25,3 +25,249 @@ Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
 Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
 USB Hub test done
 [2024-09-13 11:43:54] Remote script executed successfully.
+[2024-09-13 11:47:19] ===============================================
+[2024-09-13 11:47:19] TEST TOOLS
+[2024-09-13 11:47:19] ===============================================
+[2024-09-13 11:47:19] Box IP: 192.168.1.21
+[2024-09-13 11:47:19] Check packages
+[2024-09-13 11:47:19] ssh checking
+[2024-09-13 11:47:19] ssh installed
+[2024-09-13 11:47:19] scp checking
+[2024-09-13 11:47:19] scp installed
+[2024-09-13 11:47:19] ping checking
+[2024-09-13 11:47:19] ping installed
+[2024-09-13 11:47:19] sshpass checking
+[2024-09-13 11:47:19] sshpass installed
+[2024-09-13 11:47:19] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 11:47:29] Executing /home/tuananh/HSP-019/Test_HSP019/remote/scripts/test_DP.sh on 192.168.1.21...
+[2024-09-13 11:47:29] Remote execution output:
+[2024-09-13 11:47:29] Plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+[2024-09-13 11:47:29] Remote script executed successfully.
+[2024-09-13 11:54:31] ===============================================
+[2024-09-13 11:54:31] TEST TOOLS
+[2024-09-13 11:54:31] ===============================================
+[2024-09-13 11:54:31] Box IP: 192.168.1.21
+[2024-09-13 11:54:31] Check packages
+[2024-09-13 11:54:31] ssh checking
+[2024-09-13 11:54:31] ssh installed
+[2024-09-13 11:54:31] scp checking
+[2024-09-13 11:54:31] scp installed
+[2024-09-13 11:54:31] ping checking
+[2024-09-13 11:54:31] ping installed
+[2024-09-13 11:54:31] sshpass checking
+[2024-09-13 11:54:31] sshpass installed
+[2024-09-13 11:54:31] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 11:54:43] Executing /home/tuananh/HSP-019/Test_HSP019/remote/scripts/test_DP.sh on 192.168.1.21...
+[2024-09-13 11:54:44] Remote execution output:
+[2024-09-13 11:54:44] bash: line 1: log: command not found
+bash: line 2: log: command not found
+[2024-09-13 11:54:44] Remote script execution failed with exit code 127.
+[2024-09-13 11:56:21] ===============================================
+[2024-09-13 11:56:21] TEST TOOLS
+[2024-09-13 11:56:21] ===============================================
+[2024-09-13 11:56:21] Box IP: 192.168.1.21
+[2024-09-13 11:56:21] Check packages
+[2024-09-13 11:56:21] ssh checking
+[2024-09-13 11:56:21] ssh installed
+[2024-09-13 11:56:21] scp checking
+[2024-09-13 11:56:21] scp installed
+[2024-09-13 11:56:21] ping checking
+[2024-09-13 11:56:21] ping installed
+[2024-09-13 11:56:21] sshpass checking
+[2024-09-13 11:56:21] sshpass installed
+[2024-09-13 11:56:21] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 11:56:27] Executing /home/tuananh/HSP-019/Test_HSP019/remote/scripts/test_DP.sh on 192.168.1.21...
+[2024-09-13 11:56:27] Remote execution output:
+[2024-09-13 11:56:27] Testing Alarm IO
+Plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Alarm IO test done
+[2024-09-13 11:56:27] Remote script executed successfully.
+[2024-09-13 13:08:57] ===============================================
+[2024-09-13 13:08:57] TEST TOOLS
+[2024-09-13 13:08:57] ===============================================
+[2024-09-13 13:08:57] Box IP: 192.168.1.21
+[2024-09-13 13:08:57] Check packages
+[2024-09-13 13:08:57] ssh checking
+[2024-09-13 13:08:57] ssh installed
+[2024-09-13 13:08:57] scp checking
+[2024-09-13 13:08:57] scp installed
+[2024-09-13 13:08:57] ping checking
+[2024-09-13 13:08:57] ping installed
+[2024-09-13 13:08:57] sshpass checking
+[2024-09-13 13:08:57] sshpass installed
+[2024-09-13 13:08:57] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:09:02] Executing /home/tuananh/HSP-019/Test_HSP019/remote/scripts/test_DP.sh on 192.168.1.21...
+[2024-09-13 13:09:02] Remote execution output:
+[2024-09-13 13:09:02] Testing Alarm IO
+Plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Alarm IO test done
+[2024-09-13 13:09:35] ===============================================
+[2024-09-13 13:09:35] TEST TOOLS
+[2024-09-13 13:09:35] ===============================================
+[2024-09-13 13:09:35] Box IP: 192.168.1.21
+[2024-09-13 13:09:35] Check packages
+[2024-09-13 13:09:35] ssh checking
+[2024-09-13 13:09:35] ssh installed
+[2024-09-13 13:09:35] scp checking
+[2024-09-13 13:09:35] scp installed
+[2024-09-13 13:09:35] ping checking
+[2024-09-13 13:09:35] ping installed
+[2024-09-13 13:09:35] sshpass checking
+[2024-09-13 13:09:35] sshpass installed
+[2024-09-13 13:09:35] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:09:40] Remote execution output:
+[2024-09-13 13:09:40] Testing Alarm IO
+Plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Alarm IO test done
+[2024-09-13 13:09:56] ===============================================
+[2024-09-13 13:09:56] TEST TOOLS
+[2024-09-13 13:09:56] ===============================================
+[2024-09-13 13:09:56] Box IP: 192.168.1.21
+[2024-09-13 13:09:56] Check packages
+[2024-09-13 13:09:56] ssh checking
+[2024-09-13 13:09:56] ssh installed
+[2024-09-13 13:09:56] scp checking
+[2024-09-13 13:09:56] scp installed
+[2024-09-13 13:09:56] ping checking
+[2024-09-13 13:09:56] ping installed
+[2024-09-13 13:09:56] sshpass checking
+[2024-09-13 13:09:56] sshpass installed
+[2024-09-13 13:09:56] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:10:02] Testing Alarm IO
+Plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Alarm IO test done
+[2024-09-13 13:10:25] ===============================================
+[2024-09-13 13:10:25] TEST TOOLS
+[2024-09-13 13:10:25] ===============================================
+[2024-09-13 13:10:25] Box IP: 192.168.1.21
+[2024-09-13 13:10:25] Check packages
+[2024-09-13 13:10:25] ssh checking
+[2024-09-13 13:10:25] ssh installed
+[2024-09-13 13:10:25] scp checking
+[2024-09-13 13:10:25] scp installed
+[2024-09-13 13:10:25] ping checking
+[2024-09-13 13:10:25] ping installed
+[2024-09-13 13:10:25] sshpass checking
+[2024-09-13 13:10:25] sshpass installed
+[2024-09-13 13:10:26] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:10:32] Testing Serial Port
+Serial Number: 502c8105
+SERIAL_OK: 502c8105
+Serial test done
+[2024-09-13 13:10:39] ===============================================
+[2024-09-13 13:10:39] TEST TOOLS
+[2024-09-13 13:10:39] ===============================================
+[2024-09-13 13:10:39] Box IP: 192.168.1.21
+[2024-09-13 13:10:39] Check packages
+[2024-09-13 13:10:39] ssh checking
+[2024-09-13 13:10:39] ssh installed
+[2024-09-13 13:10:39] scp checking
+[2024-09-13 13:10:39] scp installed
+[2024-09-13 13:10:39] ping checking
+[2024-09-13 13:10:39] ping installed
+[2024-09-13 13:10:39] sshpass checking
+[2024-09-13 13:10:39] sshpass installed
+[2024-09-13 13:10:39] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:10:44] Testing RAM
+Total Memory: 7.1Gi
+RAM test done
+[2024-09-13 13:10:51] ===============================================
+[2024-09-13 13:10:51] TEST TOOLS
+[2024-09-13 13:10:51] ===============================================
+[2024-09-13 13:10:51] Box IP: 192.168.1.21
+[2024-09-13 13:10:51] Check packages
+[2024-09-13 13:10:51] ssh checking
+[2024-09-13 13:10:51] ssh installed
+[2024-09-13 13:10:51] scp checking
+[2024-09-13 13:10:51] scp installed
+[2024-09-13 13:10:51] ping checking
+[2024-09-13 13:10:51] ping installed
+[2024-09-13 13:10:51] sshpass checking
+[2024-09-13 13:10:51] sshpass installed
+[2024-09-13 13:10:51] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:10:56] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-13 13:12:06] ===============================================
+[2024-09-13 13:12:06] TEST TOOLS
+[2024-09-13 13:12:06] ===============================================
+[2024-09-13 13:12:06] Box IP: 192.168.1.21
+[2024-09-13 13:12:06] Check packages
+[2024-09-13 13:12:06] ssh checking
+[2024-09-13 13:12:06] ssh installed
+[2024-09-13 13:12:06] scp checking
+[2024-09-13 13:12:06] scp installed
+[2024-09-13 13:12:06] ping checking
+[2024-09-13 13:12:06] ping installed
+[2024-09-13 13:12:06] sshpass checking
+[2024-09-13 13:12:06] sshpass installed
+[2024-09-13 13:12:06] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:12:13] Testing Alarm IO
+Plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Alarm IO test done
+[2024-09-13 13:15:30] ===============================================
+[2024-09-13 13:15:30] TEST TOOLS
+[2024-09-13 13:15:30] ===============================================
+[2024-09-13 13:15:30] Box IP: 192.168.1.21
+[2024-09-13 13:15:30] Check packages
+[2024-09-13 13:15:30] ssh checking
+[2024-09-13 13:15:30] ssh installed
+[2024-09-13 13:15:30] scp checking
+[2024-09-13 13:15:30] scp installed
+[2024-09-13 13:15:30] ping checking
+[2024-09-13 13:15:30] ping installed
+[2024-09-13 13:15:30] sshpass checking
+[2024-09-13 13:15:30] sshpass installed
+[2024-09-13 13:15:30] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:15:35] Testing power
+Please plug in the power cord and check the console log
+bash: line 22: unexpected EOF while looking for matching `"'
+bash: line 24: syntax error: unexpected end of file
+[2024-09-13 13:15:53] ===============================================
+[2024-09-13 13:15:53] TEST TOOLS
+[2024-09-13 13:15:53] ===============================================
+[2024-09-13 13:15:53] Box IP: 192.168.1.21
+[2024-09-13 13:15:53] Check packages
+[2024-09-13 13:15:53] ssh checking
+[2024-09-13 13:15:53] ssh installed
+[2024-09-13 13:15:53] scp checking
+[2024-09-13 13:15:53] scp installed
+[2024-09-13 13:15:53] ping checking
+[2024-09-13 13:15:54] ping installed
+[2024-09-13 13:15:54] sshpass checking
+[2024-09-13 13:15:54] sshpass installed
+[2024-09-13 13:15:54] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:16:00] Testing power
+Please plug in the power cord and check the console log
+Account to login is root, password is oelinux123
+Power test done
+[2024-09-13 13:18:06] ===============================================
+[2024-09-13 13:18:06] TEST TOOLS
+[2024-09-13 13:18:06] ===============================================
+[2024-09-13 13:18:06] Box IP: 192.168.1.21
+[2024-09-13 13:18:06] Check packages
+[2024-09-13 13:18:06] ssh checking
+[2024-09-13 13:18:06] ssh installed
+[2024-09-13 13:18:06] scp checking
+[2024-09-13 13:18:06] scp installed
+[2024-09-13 13:18:06] ping checking
+[2024-09-13 13:18:06] ping installed
+[2024-09-13 13:18:06] sshpass checking
+[2024-09-13 13:18:06] sshpass installed
+[2024-09-13 13:18:06] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:18:16] Testing GPIO
+GPIO test completed. Please check the voltage on pins 2, 3, 4, 5 of J1101 for 1.8V.
+GPIO test done
