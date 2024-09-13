@@ -17,7 +17,7 @@ log "Testing ROM"
 # Extract the 'Size' column for the '/' mount point
 total_flash=$(df -h | awk '$NF == "/" {print $2}')
 
-# Print the total flash size (99G in this case)
+# Print the total flash size 
 log "Total Flash: ${total_flash}"
 
 log "ROM test done"
