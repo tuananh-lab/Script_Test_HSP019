@@ -89,7 +89,8 @@ case $choice in
     5) script="${scripts_dir}/test_usb_hub.sh" ;;
     6) script="${scripts_dir}/test_usb_type_a.sh" ;;
     7) script="${scripts_dir}/test_sd_card.sh" ;;
-    8) script="${scripts_dir}/test_reset_button.sh" ;;
+    # 8) script="${scripts_dir}/test_reset_button.sh" ;;
+    8) log "Test Factory Reset button not support while test remote" ; exit 0 ;;
     9) script="${scripts_dir}/test_nvme.sh" ;;
     10) script="${scripts_dir}/test_rtc.sh" ;;
     11) script="${scripts_dir}/test_lte.sh" ;;
@@ -97,7 +98,8 @@ case $choice in
     13) script="${scripts_dir}/test_alarm_IO.sh" ;;
     14) script="${scripts_dir}/test_DP.sh" ;;
     15) script="${scripts_dir}/test_GPIO.sh" ;;
-    16) script="${scripts_dir}/test_camera.sh" ;;
+    # 16) script="${scripts_dir}/test_camera.sh" ;;
+    16) log "Test camera not support while test remote" ; exit 0 ;;
     17) log "Exiting..."; exit 0 ;;
     *) log "Invalid choice. Please select a number between 1 and 17." ;;
 esac

@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Set current directory
@@ -16,8 +17,8 @@ file_exists() {
     [ -e "$1" ]
 }
 # Start testing
-log "Testing Alarm IO"
+log "Testing DP(Display Port)..."
 log "Please plug the type-c to hdmi adapter into the monitor in both directions"
 log "The results display the image on the screen"
-log "Alarm IO test done"
+log "Display port test done"
 exit $result
