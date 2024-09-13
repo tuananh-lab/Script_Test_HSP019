@@ -271,3 +271,97 @@ Power test done
 [2024-09-13 13:18:16] Testing GPIO
 GPIO test completed. Please check the voltage on pins 2, 3, 4, 5 of J1101 for 1.8V.
 GPIO test done
+[2024-09-13 13:33:37] ===============================================
+[2024-09-13 13:33:37] TEST TOOLS
+[2024-09-13 13:33:37] ===============================================
+[2024-09-13 13:33:37] Box IP: 192.168.1.21
+[2024-09-13 13:33:37] Check packages
+[2024-09-13 13:33:37] ssh checking
+[2024-09-13 13:33:37] ssh installed
+[2024-09-13 13:33:37] scp checking
+[2024-09-13 13:33:37] scp installed
+[2024-09-13 13:33:37] ping checking
+[2024-09-13 13:33:37] ping installed
+[2024-09-13 13:33:37] sshpass checking
+[2024-09-13 13:33:37] sshpass installed
+[2024-09-13 13:33:37] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:33:45] Testing power
+Please plug in the power cord and check the console log
+Account to login is root, password is oelinux123
+Power test done
+[2024-09-13 13:33:53] ===============================================
+[2024-09-13 13:33:53] TEST TOOLS
+[2024-09-13 13:33:53] ===============================================
+[2024-09-13 13:33:53] Box IP: 192.168.1.21
+[2024-09-13 13:33:53] Check packages
+[2024-09-13 13:33:53] ssh checking
+[2024-09-13 13:33:53] ssh installed
+[2024-09-13 13:33:53] scp checking
+[2024-09-13 13:33:53] scp installed
+[2024-09-13 13:33:53] ping checking
+[2024-09-13 13:33:53] ping installed
+[2024-09-13 13:33:53] sshpass checking
+[2024-09-13 13:33:53] sshpass installed
+[2024-09-13 13:33:53] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:34:00] Testing Serial Port
+Serial Number: 502c8105
+SERIAL_OK: 502c8105
+Serial test done
+[2024-09-13 13:34:05] ===============================================
+[2024-09-13 13:34:05] TEST TOOLS
+[2024-09-13 13:34:05] ===============================================
+[2024-09-13 13:34:05] Box IP: 192.168.1.21
+[2024-09-13 13:34:05] Check packages
+[2024-09-13 13:34:05] ssh checking
+[2024-09-13 13:34:05] ssh installed
+[2024-09-13 13:34:05] scp checking
+[2024-09-13 13:34:05] scp installed
+[2024-09-13 13:34:05] ping checking
+[2024-09-13 13:34:05] ping installed
+[2024-09-13 13:34:05] sshpass checking
+[2024-09-13 13:34:05] sshpass installed
+[2024-09-13 13:34:05] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:34:11] Testing RAM
+Total Memory: 7.1Gi
+RAM test done
+[2024-09-13 13:50:57] ===============================================
+[2024-09-13 13:50:57] TEST TOOLS
+[2024-09-13 13:50:57] ===============================================
+[2024-09-13 13:50:57] Box IP: 192.168.1.21
+[2024-09-13 13:50:57] Check packages
+[2024-09-13 13:50:57] ssh checking
+[2024-09-13 13:50:57] ssh installed
+[2024-09-13 13:50:57] scp checking
+[2024-09-13 13:50:57] scp installed
+[2024-09-13 13:50:57] ping checking
+[2024-09-13 13:50:57] ping installed
+[2024-09-13 13:50:57] sshpass checking
+[2024-09-13 13:50:57] sshpass installed
+[2024-09-13 13:50:57] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 13:51:05] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-13 14:03:14] ===============================================
+[2024-09-13 14:03:14] TEST TOOLS
+[2024-09-13 14:03:14] ===============================================
+[2024-09-13 14:03:14] Box IP: 192.168.1.21
+[2024-09-13 14:03:14] Check packages
+[2024-09-13 14:03:14] ssh checking
+[2024-09-13 14:03:14] ssh installed
+[2024-09-13 14:03:14] scp checking
+[2024-09-13 14:03:14] scp installed
+[2024-09-13 14:03:14] ping checking
+[2024-09-13 14:03:14] ping installed
+[2024-09-13 14:03:14] sshpass checking
+[2024-09-13 14:03:14] sshpass installed
+[2024-09-13 14:03:15] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-13 14:03:20] Testing ROM
+Total Flash: 99G
+ROM test done
