@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Log file path (change this to your desired log file)
+# Log file path
 export log_file="remote_test.log"
 
 current_dir="$(cd "$(dirname "$0")" && pwd)"
@@ -10,7 +10,7 @@ current_dir="$(cd "$(dirname "$0")" && pwd)"
 . ${current_dir}/error/error.sh
 
 # Set the directory containing the test scripts
-scripts_dir="$(get_current_dir "$0")/remote/scripts" 
+scripts_dir="$(get_current_dir "$0")/remote/scripts"
 
 # Check if IP address is provided
 if [ -z "$1" ]; then
@@ -105,13 +105,20 @@ esac
 check_script "$script"
 
 # Execute the selected script remotely using sshpass and capture the output
-# log "Executing $script on $box_ip..."
+log "Executing $script on $box_ip..."
 
 remote_output=$(echo "$password" | sshpass -p "$password" ssh root@$box_ip "bash -s" < "$script" 2>&1)
+result=$?
 
 # Log the output of the remote execution
-# log "Remote execution output:"
+log "Remote execution output:"
 log "$remote_output"
 
+# Log the result of the remote execution
+if [ $result -eq 0 ]; then
+    log "Remote script executed successfully."
+else
+    log "Remote script execution failed with exit code $result."
+fi
 
 exit $result

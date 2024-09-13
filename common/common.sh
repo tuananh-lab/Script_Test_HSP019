@@ -1,12 +1,12 @@
 #!/bin/bash
-
+log_file="remote_test.log"
 # Function to log messages
 log() {
     local log_msg="$1"
     local timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
 
     # Print the message to the console
-    echo "[$timestamp] $log_msg"
+    echo "[$timestamp] $log_msg" | tee -a "$log_file"
 }
 
 logcat() {
