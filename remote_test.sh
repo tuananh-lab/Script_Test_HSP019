@@ -4,6 +4,7 @@
 export log_file="remote_test.log"
 
 current_dir="$(cd "$(dirname "$0")" && pwd)"
+result=0
 
 # Add libs
 . ${current_dir}/common/common.sh
@@ -48,7 +49,7 @@ fi
 read -sp "Enter password for root@$box_ip: " password
 echo
 
-# Display the menu for selecting the test function
+# Main script
 echo "Select a function to test on AIBOX QCS6490:"
 echo "1. Power Button"
 echo "2. Serial Port"
