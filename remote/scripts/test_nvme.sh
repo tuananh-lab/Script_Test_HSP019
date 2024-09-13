@@ -37,7 +37,6 @@ if [ -z "$nvme_info" ]; then
     result=1
 else
     log "NVMe Device Information:"
-    log "$nvme_info"
     echo "NVME_DEVICE_OK: $nvme_info"
 fi
 
