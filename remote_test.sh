@@ -4,9 +4,10 @@
 export log_file="remote_test.log"
 
 current_dir="$(cd "$(dirname "$0")" && pwd)"
+
 # Add libs
-. common/common.sh
-. error/error.sh
+. ${current_dir}/common/common.sh
+. ${current_dir}/error/error.sh
 
 # Set the directory containing the test scripts
 scripts_dir="$(get_current_dir "$0")/remote/scripts" 
@@ -104,12 +105,12 @@ esac
 check_script "$script"
 
 # Execute the selected script remotely using sshpass and capture the output
-log "Executing $script on $box_ip..."
+# log "Executing $script on $box_ip..."
 
 remote_output=$(echo "$password" | sshpass -p "$password" ssh root@$box_ip "bash -s" < "$script" 2>&1)
 
 # Log the output of the remote execution
-log "Remote execution output:"
+# log "Remote execution output:"
 log "$remote_output"
 
 

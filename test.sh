@@ -5,6 +5,7 @@ result=0
 
 scripts_dir="${current_dir}/remote/scripts"
 
+# Add libs
 . ${current_dir}/common/common.sh
 . ${current_dir}/error/error.sh
 
