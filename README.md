@@ -46,7 +46,7 @@ The `Test_HSP019` directory provides scripts and resources necessary for testing
    After running the executable, you will see a list of functions to test:
 
     ```
-    1. Power Button
+    1. Power
     2. Serial Port
     3. RAM
     4. ROM
@@ -73,7 +73,7 @@ When you select the RAM test function, you will see the following result:
 
     ```
     Select a function to test:
-    1. Power Button
+    1. Power
     2. Serial Port
     3. RAM
     4. ROM
@@ -147,7 +147,7 @@ You just need to select the function you want to test by entering the correspond
 
 ## Function List
 
-- **Power Button**: Tests the functionality of the power button.
+- **Power**: Tests the functionality of the power.
 - **Serial Port**: Checks the operation of the serial port.
 - **RAM**: Tests the system memory.
 - **ROM**: Verifies the read-only memory.
@@ -167,13 +167,13 @@ You just need to select the function you want to test by entering the correspond
 ## Notes When Testing Functions
 
 When using remote testing, some testing functions may not be available:
-- **Power Button**
+- **Power**
 - **Factory Reset Button**
 - **DP (Display Port)**
 - **Camera**
 
 Some functions cannot be verified through scripts alone and require physical actions:
-- **Power Button**: Unplug the power, press the button, and check the boot log via console. Log in with the account: `root/oelinux123`.
+- **Power**: Supply power for board, and check the boot log via console. Log in with the account: `root/oelinux123`.
 - **DP (DisplayPort)**: Plug a type-C to HDMI adapter into the monitor and check the display on the screen.
 
 Some functions require a combination of running the script and performing physical actions:

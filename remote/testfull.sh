@@ -46,8 +46,8 @@ run_test "${current_dir}/scripts/test_lte.sh"
 # NVMe
 run_test "${current_dir}/scripts/test_nvme.sh"
 
-# POWER_BUTTON
-run_test "${current_dir}/scripts/test_power_button.sh"
+# POWER
+run_test "${current_dir}/scripts/test_power.sh"
 
 # RAM
 run_test "${current_dir}/scripts/test_ram.sh"

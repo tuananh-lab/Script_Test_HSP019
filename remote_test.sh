@@ -51,7 +51,7 @@ echo
 
 # Main script
 echo "Select a function to test on AIBOX QCS6490:"
-echo "1. Power Button"
+echo "1. Power"
 echo "2. Serial Port"
 echo "3. RAM"
 echo "4. ROM"
@@ -82,7 +82,7 @@ check_script() {
 
 # Determine the script to run based on user choice
 case $choice in
-    1) script="${scripts_dir}/test_power_button.sh" ;;
+    1) script="${scripts_dir}/test_power.sh" ;;
     2) script="${scripts_dir}/test_serial.sh" ;;
     3) script="${scripts_dir}/test_ram.sh" ;;
     4) script="${scripts_dir}/test_rom.sh" ;;
