@@ -1,12 +1,14 @@
 #!/bin/bash
 
-# Function to log messages with a specific timestamp format
-log() {
-  local message="$1"
-  local timestamp
-  timestamp=$(date +"[%Y-%m-%d %H:%M:%S]")
-  echo "$timestamp $message" | tee -a remote_test_log.txt
-}
+# Log file path (change this to your desired log file)
+export log_file="remote_test.log"
+
+# Add libs
+. common/common.sh
+. error/error.sh
+
+# Set the directory containing the test scripts
+scripts_dir="$(get_current_dir "$0")/remote/scripts" 
 
 # Check if IP address is provided
 if [ -z "$1" ]; then
@@ -22,42 +24,27 @@ log "TEST TOOLS"
 log "==============================================="
 log "Box IP: $box_ip"
 
-# Define the directory for the scripts
-current_dir="$(cd "$(dirname "$0")" && pwd)"
-scripts_dir="${current_dir}/remote/scripts"
-result=0
-
-# Source common functions and error handling
-. ${current_dir}/common/common.sh
-. ${current_dir}/error/error.sh
+# Check packages
+log "Check packages"
+check_package ssh
+check_package scp
+check_package ping
+check_package sshpass
 
 # Set executable permissions for all scripts in the scripts directory
-chmod +x ${scripts_dir}/*.sh
+chmod +x "${scripts_dir}"/*.sh
 
-# Check if necessary commands are available
-for cmd in ssh scp ping sshpass; do
-  log "$cmd checking"
-  command -v $cmd > /dev/null 2>&1
-  if [ $? -ne 0 ]; then
-    log "$cmd is not installed. Please install it before running the script."
-    exit 1
-  else
-    log "$cmd installed"
-  fi
-done
+# Check if the box is reachable
+if ! ping -c 1 $box_ip > /dev/null 2>&1; then
+  log "Box with IP $box_ip is not reachable."
+  exit 1
+else
+  log "Host $box_ip is reachable => LAN okie"
+fi
 
 # Prompt for password
 read -sp "Enter password for root@$box_ip: " password
 echo
-
-# Check if the box is reachable
-ping -c 1 $box_ip > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-  log "Box with IP $box_ip is not reachable."
-  exit 1
-else
-  log "Host $box_ip is reachable => Lan okie"
-fi
 
 # Display the menu for selecting the test function
 echo "Select a function to test on AIBOX QCS6490:"
@@ -90,7 +77,7 @@ check_script() {
   fi
 }
 
-# Execute the corresponding test script remotely
+# Determine the script to run based on user choice
 case $choice in
     1) script="${scripts_dir}/test_power_button.sh" ;;
     2) script="${scripts_dir}/test_serial.sh" ;;
@@ -115,14 +102,14 @@ esac
 # Check if the selected script exists
 check_script "$script"
 
-# Execute the selected script
-log "Executing $script remotely"
-echo "$password" | sshpass -p "$password" ssh root@$box_ip "bash -s" < "$script"
+# Execute the selected script remotely using sshpass and capture the output
+log "Executing $script on $box_ip..."
 
-# Check if the remote command was successful
-if [ $? -ne 0 ]; then
-  log "Failed to execute $script on $box_ip."
-  result=1
-fi
+remote_output=$(echo "$password" | sshpass -p "$password" ssh root@$box_ip "bash -s" < "$script" 2>&1)
+
+# Log the output of the remote execution
+log "Remote execution output:"
+log "$remote_output"
+
 
 exit $result

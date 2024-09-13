@@ -1,79 +1,106 @@
 #!/bin/bash
 
-# Define status codes
-STATUS_OK="ok"
-STATUS_ERROR="error"
-
-# ROM test
-STATUS_ROM_SIZE_ERROR="rom size error"
-STATUS_ROM_OK="rom ok"
-
-# RAM test
-STATUS_RAM_SIZE_ERROR="ram size error"
-STATUS_RAM_OK="ram ok"
-
-# LAN test
-STATUS_LAN_ERROR="lan error"
-STATUS_LAN_ETH0_ERROR="eth0 error"
-STATUS_LAN_ETH1_ERROR="eth1 error"
-STATUS_WAN_ERROR="wan error"
-STATUS_LAN_OK="lan ok"
-STATUS_LAN_ETH0_OK="eth0 ok"
-STATUS_LAN_ETH1_OK="eth1 ok"
-STATUS_WAN_OK="wan ok"
-
-# USB test
-STATUS_USB_HUB_ERROR="usb hub error"
-STATUS_USB_HUB_OK="usb hub ok"
-STATUS_USB_TYPE_A_ERROR="usb type-a error"
-STATUS_USB_TYPE_A_OK="usb type-a ok"
-
-# SD Card test
-STATUS_SD_CARD_ERROR="sd card error"
-STATUS_SD_CARD_OK="sd card ok"
-
-# Reset Button test
-STATUS_RESET_BUTTON_ERROR="reset button error"
-STATUS_RESET_BUTTON_OK="reset button ok"
-
-# NVMe test
-STATUS_NVME_ERROR="nvme error"
-STATUS_NVME_OK="nvme ok"
-
-# RTC test
-STATUS_RTC_ERROR="rtc error"
-STATUS_RTC_OK="rtc ok"
-
-# LTE 4G test
-STATUS_LTE_ERROR="lte error"
-STATUS_LTE_OK="lte ok"
-
-# LAN7800 test
-STATUS_LAN7800_ERROR="lan7800 error"
-STATUS_LAN7800_OK="lan7800 ok"
-
-# Alarm IO test
-STATUS_ALARM_IO_ERROR="alarm io error"
-STATUS_ALARM_IO_OK="alarm io ok"
-
-# DP (Display Port) test
-STATUS_DP_ERROR="dp error"
-STATUS_DP_OK="dp ok"
-
-# GPIO test
-STATUS_GPIO_ERROR="gpio error"
-STATUS_GPIO_OK="gpio ok"
-
-# Camera test
-STATUS_CAMERA_ERROR="camera error"
-STATUS_CAMERA_OK="camera ok"
-
-
-# Helper functions
+# Function to log messages
 log() {
-    echo "$(date) - $1"
+    local log_msg="$1"
+    local timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
+
+    # Print the message to the console (optional)
+    echo "[$timestamp] $log_msg"
+
+    # Append the message to the log file
+    echo "[$timestamp] $log_msg" >> "$log_file"
 }
 
+logcat() {
+    local file="$1"
+    local timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
+
+    # Store the file contents in cat_output
+    cat_output="$(cat $file)"  # Replace "file.txt" with the actual file name
+
+    # Use echo and command substitution to iterate through lines
+    while IFS= read -r line; do
+        # Print the message to the console (optional)
+        echo "[$timestamp] $line"
+
+        # Append the message to the log file
+        echo "[$timestamp] $line" >> "$log_file"
+    done <<< "$cat_output"
+}
+
+# Check folder exist
+folder_exists() {
+    if [ -d "$1" ]; then
+        return 0  # Folder exists
+    else
+        return 1  # Folder does not exist
+    fi
+}
+
+# Check folder exist
 file_exists() {
-    [ -e "$1" ]
+    if [ -f "$1" ]; then
+        return 0  # File exists
+    else
+        return 1  # File does not exist
+    fi
+}
+
+# @func: check packagas
+check_package() {
+    package=$1
+    log "$package checking"
+    if command -v $package &>/dev/null; then
+        log "$package installed"
+    else
+        log "$package command not found"
+        log "Please install: sudo apt install $package"
+        exit 1
+    fi
+}
+
+# Function to check if a string is a valid IPv4 address
+is_valid_ipv4() {
+    if [[ $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        return 0 # valid ip
+    fi
+    return 1 # invalid ip
+}
+
+# Function to perform a ping test
+ping_test() {
+    local host="$1"
+    local count=1  # Number of ping packets to send (adjust as needed)
+
+    # Perform the ping test
+    if ping -c "$count" "$host" >/dev/null 2>&1; then
+        return 0 # echo "Host $host is reachable."
+    else
+        return 1 # echo "Host $host is not reachable."
+    fi
+}
+
+# get $0 dir
+get_current_dir() {
+    # Get the directory of the currently executing script
+    current_dir="$(cd "$(dirname "$1")" && pwd)"
+    echo "$current_dir"
+}
+
+update_path() {
+    # Define the directories to check for in the PATH
+    required_dirs=("/usr/local/sbin" "/usr/sbin" "/sbin")
+
+    # Check if each required directory is in the PATH
+    for dir in "${required_dirs[@]}"; do
+        if [[ ":$PATH:" != *":$dir:"* ]]; then
+            # Directory is missing from the PATH, so add it
+            export PATH="$PATH:$dir"
+            log "Added $dir to PATH"
+        fi
+    done
+
+    # Optionally, you can print the updated PATH
+    log "Updated PATH: $PATH"
 }
