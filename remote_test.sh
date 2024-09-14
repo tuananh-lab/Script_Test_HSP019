@@ -7,7 +7,7 @@ export log_file="remote_test.log"
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 scripts_dir="${current_dir}/remote/scripts"
 
-# Add libs (use correct path)
+# Add libs
 . "${current_dir}/common/common.sh"
 . "${current_dir}/error/error.sh"
 
