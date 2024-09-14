@@ -1313,3 +1313,266 @@ GPIO test done
 [2024-09-13 17:24:15] sshpass installed
 [2024-09-13 17:24:15] Host 192.168.1.21 is reachable => LAN okie
 [2024-09-13 17:24:20] Exiting...
+[2024-09-14 09:01:41] ===============================================
+[2024-09-14 09:01:41] TEST TOOLS
+[2024-09-14 09:01:41] ===============================================
+[2024-09-14 09:01:41] Box IP: 192.168.1.21
+[2024-09-14 09:01:41] Check packages
+[2024-09-14 09:01:41] ssh checking
+[2024-09-14 09:01:41] ssh installed
+[2024-09-14 09:01:41] scp checking
+[2024-09-14 09:01:41] scp installed
+[2024-09-14 09:01:41] ping checking
+[2024-09-14 09:01:41] ping installed
+[2024-09-14 09:01:41] sshpass checking
+[2024-09-14 09:01:41] sshpass installed
+[2024-09-14 09:01:41] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 09:01:50] Testing RAM
+Total Memory: 7.1Gi
+RAM test done
+[2024-09-14 10:04:36] ===============================================
+[2024-09-14 10:04:36] TEST TOOLS
+[2024-09-14 10:04:36] ===============================================
+[2024-09-14 10:04:36] Box IP: 192.168.1.21
+[2024-09-14 10:04:36] Check packages
+[2024-09-14 10:04:36] ssh checking
+[2024-09-14 10:04:36] ssh installed
+[2024-09-14 10:04:36] scp checking
+[2024-09-14 10:04:36] scp installed
+[2024-09-14 10:04:36] ping checking
+[2024-09-14 10:04:36] ping installed
+[2024-09-14 10:04:36] sshpass checking
+[2024-09-14 10:04:36] sshpass installed
+[2024-09-14 10:04:36] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:04:51] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 10:11:00] ===============================================
+[2024-09-14 10:11:00] TEST TOOLS
+[2024-09-14 10:11:00] ===============================================
+[2024-09-14 10:11:00] Box IP: 192.168.1.21
+[2024-09-14 10:11:00] Check packages
+[2024-09-14 10:11:00] ssh checking
+[2024-09-14 10:11:00] ssh installed
+[2024-09-14 10:11:00] scp checking
+[2024-09-14 10:11:00] scp installed
+[2024-09-14 10:11:00] ping checking
+[2024-09-14 10:11:00] ping installed
+[2024-09-14 10:11:00] sshpass checking
+[2024-09-14 10:11:00] sshpass installed
+[2024-09-14 10:11:00] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:11:29] Testing USB TYPE-A (4 ports)
+Displaying USB information for all ports
+/:  Bus 05.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 5000M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 1: Dev 3, If 0, Class=Vendor Specific Class, Driver=lan78xx, 5000M
+        |__ Port 4: Dev 4, If 0, Class=Hub, Driver=hub/4p, 5000M
+/:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/5p, 480M
+        |__ Port 4: Dev 3, If 0, Class=Hub, Driver=hub/5p, 480M
+            |__ Port 5: Dev 5, If 0, Class=Vendor Specific Class, Driver=, 480M
+        |__ Port 5: Dev 4, If 0, Class=Vendor Specific Class, Driver=, 480M
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/0p, 5000M
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=dummy_hcd/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Vendor Specific Class, Driver=, 480M
+    |__ Port 1: Dev 2, If 1, Class=Vendor Specific Class, Driver=, 480M
+USB TYPE-A (4 ports) test done
+[2024-09-14 10:13:37] ===============================================
+[2024-09-14 10:13:37] TEST TOOLS
+[2024-09-14 10:13:37] ===============================================
+[2024-09-14 10:13:37] Box IP: 192.168.1.21
+[2024-09-14 10:13:37] Check packages
+[2024-09-14 10:13:37] ssh checking
+[2024-09-14 10:13:37] ssh installed
+[2024-09-14 10:13:37] scp checking
+[2024-09-14 10:13:37] scp installed
+[2024-09-14 10:13:37] ping checking
+[2024-09-14 10:13:37] ping installed
+[2024-09-14 10:13:37] sshpass checking
+[2024-09-14 10:13:37] sshpass installed
+[2024-09-14 10:13:37] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:13:56] Test Factory Reset button not support while test remote
+[2024-09-14 10:40:50] ===============================================
+[2024-09-14 10:40:50] TEST TOOLS
+[2024-09-14 10:40:50] ===============================================
+[2024-09-14 10:40:50] Box IP: 192.168.1.21
+[2024-09-14 10:40:50] Check packages
+[2024-09-14 10:40:50] ssh checking
+[2024-09-14 10:40:50] ssh installed
+[2024-09-14 10:40:50] scp checking
+[2024-09-14 10:40:50] scp installed
+[2024-09-14 10:40:50] ping checking
+[2024-09-14 10:40:50] ping installed
+[2024-09-14 10:40:50] sshpass checking
+[2024-09-14 10:40:50] sshpass installed
+[2024-09-14 10:40:50] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:41:02] Testing RTC
+RTC Date: 1970-01-01
+RTC Time: 01:48:17
+RTC test done
+[2024-09-14 10:43:10] ===============================================
+[2024-09-14 10:43:10] TEST TOOLS
+[2024-09-14 10:43:10] ===============================================
+[2024-09-14 10:43:10] Box IP: 192.168.1.21
+[2024-09-14 10:43:10] Check packages
+[2024-09-14 10:43:10] ssh checking
+[2024-09-14 10:43:10] ssh installed
+[2024-09-14 10:43:10] scp checking
+[2024-09-14 10:43:10] scp installed
+[2024-09-14 10:43:10] ping checking
+[2024-09-14 10:43:10] ping installed
+[2024-09-14 10:43:10] sshpass checking
+[2024-09-14 10:43:10] sshpass installed
+[2024-09-14 10:43:10] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:43:21] Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 10:44:14] ===============================================
+[2024-09-14 10:44:14] TEST TOOLS
+[2024-09-14 10:44:14] ===============================================
+[2024-09-14 10:44:14] Box IP: 192.168.1.21
+[2024-09-14 10:44:14] Check packages
+[2024-09-14 10:44:14] ssh checking
+[2024-09-14 10:44:14] ssh installed
+[2024-09-14 10:44:14] scp checking
+[2024-09-14 10:44:14] scp installed
+[2024-09-14 10:44:14] ping checking
+[2024-09-14 10:44:14] ping installed
+[2024-09-14 10:44:14] sshpass checking
+[2024-09-14 10:44:14] sshpass installed
+[2024-09-14 10:44:14] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:44:20] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 10:44:20] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 10:45:32] ===============================================
+[2024-09-14 10:45:32] TEST TOOLS
+[2024-09-14 10:45:32] ===============================================
+[2024-09-14 10:45:32] Box IP: 192.168.1.21
+[2024-09-14 10:45:32] Check packages
+[2024-09-14 10:45:32] ssh checking
+[2024-09-14 10:45:32] ssh installed
+[2024-09-14 10:45:32] scp checking
+[2024-09-14 10:45:32] scp installed
+[2024-09-14 10:45:32] ping checking
+[2024-09-14 10:45:32] ping installed
+[2024-09-14 10:45:32] sshpass checking
+[2024-09-14 10:45:32] sshpass installed
+[2024-09-14 10:45:32] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:45:39] Execute the selected script remotely using sshpass and capture the output
+[2024-09-14 10:45:39] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 10:45:39] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 10:46:06] ===============================================
+[2024-09-14 10:46:06] TEST TOOLS
+[2024-09-14 10:46:06] ===============================================
+[2024-09-14 10:46:06] Box IP: 192.168.1.21
+[2024-09-14 10:46:06] Check packages
+[2024-09-14 10:46:06] ssh checking
+[2024-09-14 10:46:06] ssh installed
+[2024-09-14 10:46:06] scp checking
+[2024-09-14 10:46:06] scp installed
+[2024-09-14 10:46:06] ping checking
+[2024-09-14 10:46:06] ping installed
+[2024-09-14 10:46:06] sshpass checking
+[2024-09-14 10:46:06] sshpass installed
+[2024-09-14 10:46:06] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:46:12] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 10:46:13] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 10:55:44] ===============================================
+[2024-09-14 10:55:45] TEST TOOLS
+[2024-09-14 10:55:45] ===============================================
+[2024-09-14 10:55:45] Box IP: 192.168.1.21
+[2024-09-14 10:55:45] Check packages
+[2024-09-14 10:55:45] ssh checking
+[2024-09-14 10:55:45] ssh installed
+[2024-09-14 10:55:45] scp checking
+[2024-09-14 10:55:45] scp installed
+[2024-09-14 10:55:45] ping checking
+[2024-09-14 10:55:45] ping installed
+[2024-09-14 10:55:45] sshpass checking
+[2024-09-14 10:55:45] sshpass installed
+[2024-09-14 10:55:45] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:55:52] Test camera not support while test remote
+[2024-09-14 10:59:49] ===============================================
+[2024-09-14 10:59:49] TEST TOOLS
+[2024-09-14 10:59:49] ===============================================
+[2024-09-14 10:59:49] Box IP: 192.168.1.21
+[2024-09-14 10:59:49] Check packages
+[2024-09-14 10:59:49] ssh checking
+[2024-09-14 10:59:49] ssh installed
+[2024-09-14 10:59:49] scp checking
+[2024-09-14 10:59:49] scp installed
+[2024-09-14 10:59:49] ping checking
+[2024-09-14 10:59:49] ping installed
+[2024-09-14 10:59:49] sshpass checking
+[2024-09-14 10:59:49] sshpass installed
+[2024-09-14 10:59:49] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 10:59:57] Test camera not support while test remote
+[2024-09-14 10:59:57] Please run test.sh in the HSP019_Test folder directly on the device and check the camera function.
+[2024-09-14 11:10:47] ===============================================
+[2024-09-14 11:10:47] TEST TOOLS
+[2024-09-14 11:10:47] ===============================================
+[2024-09-14 11:10:47] Box IP: 192.168.1.21
+[2024-09-14 11:10:47] Check packages
+[2024-09-14 11:10:47] ssh checking
+[2024-09-14 11:10:47] ssh installed
+[2024-09-14 11:10:47] scp checking
+[2024-09-14 11:10:47] scp installed
+[2024-09-14 11:10:47] ping checking
+[2024-09-14 11:10:47] ping installed
+[2024-09-14 11:10:47] sshpass checking
+[2024-09-14 11:10:47] sshpass installed
+[2024-09-14 11:10:47] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 11:13:57] ===============================================
+[2024-09-14 11:13:57] TEST TOOLS
+[2024-09-14 11:13:57] ===============================================
+[2024-09-14 11:13:57] Box IP: 192.168.1.21
+[2024-09-14 11:13:57] Check packages
+[2024-09-14 11:13:57] ssh checking
+[2024-09-14 11:13:57] ssh installed
+[2024-09-14 11:13:57] scp checking
+[2024-09-14 11:13:57] scp installed
+[2024-09-14 11:13:57] ping checking
+[2024-09-14 11:13:57] ping installed
+[2024-09-14 11:13:57] sshpass checking
+[2024-09-14 11:13:57] sshpass installed
+[2024-09-14 11:13:57] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 11:14:04] Test Factory Reset button not support while test remote
+[2024-09-14 11:14:04] Please run test.sh in the HSP019_Test folder directly on the device and check the function test.

@@ -90,7 +90,8 @@ case $choice in
     6) script="${scripts_dir}/test_usb_type_a.sh" ;;
     7) script="${scripts_dir}/test_sd_card.sh" ;;
     # 8) script="${scripts_dir}/test_reset_button.sh" ;;
-    8) log "Test Factory Reset button not support while test remote" ; exit 0 ;;
+    8)  log "Test Factory Reset button not support while test remote" ;
+        log "Please run test.sh in the HSP019_Test folder directly on the device and check the function test." ; exit 0 ;;
     9) script="${scripts_dir}/test_nvme.sh" ;;
     10) script="${scripts_dir}/test_rtc.sh" ;;
     11) script="${scripts_dir}/test_lte.sh" ;;
@@ -99,7 +100,8 @@ case $choice in
     14) script="${scripts_dir}/test_DP.sh" ;;
     15) script="${scripts_dir}/test_GPIO.sh" ;;
     # 16) script="${scripts_dir}/test_camera.sh" ;;
-    16) log "Test camera not support while test remote" ; exit 0 ;;
+    16)  log "Test camera not support while test remote" ; 
+         log "Please run test.sh in the HSP019_Test folder directly on the device and check the function test." ; exit 0 ;;
     17) log "Exiting..."; exit 0 ;;
     *) log "Invalid choice. Please select a number between 1 and 17." ;;
 esac
@@ -107,8 +109,8 @@ esac
 # Check if the selected script exists
 check_script "$script"
 
-# Execute the selected script remotely using sshpass and capture the output
-# log "Executing $script on $box_ip..."
+#Execute the selected script remotely using sshpass and capture the output
+log "Executing $script on $box_ip..."
 
 remote_output=$(echo "$password" | sshpass -p "$password" ssh root@$box_ip "bash -s" < "$script" 2>&1)
 result=$?
