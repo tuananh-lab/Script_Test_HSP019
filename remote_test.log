@@ -1576,3 +1576,79 @@ USB Hub test done
 [2024-09-14 11:13:57] Host 192.168.1.21 is reachable => LAN okie
 [2024-09-14 11:14:04] Test Factory Reset button not support while test remote
 [2024-09-14 11:14:04] Please run test.sh in the HSP019_Test folder directly on the device and check the function test.
+[2024-09-14 11:23:58] ===============================================
+[2024-09-14 11:23:58] TEST TOOLS
+[2024-09-14 11:23:58] ===============================================
+[2024-09-14 11:23:58] Box IP: 192.168.1.21
+[2024-09-14 11:23:58] Check packages
+[2024-09-14 11:23:58] ssh checking
+[2024-09-14 11:23:58] ssh installed
+[2024-09-14 11:23:58] scp checking
+[2024-09-14 11:23:58] scp installed
+[2024-09-14 11:23:58] ping checking
+[2024-09-14 11:23:58] ping installed
+[2024-09-14 11:23:58] sshpass checking
+[2024-09-14 11:23:58] sshpass installed
+[2024-09-14 11:23:58] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 11:24:05] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 11:24:05] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 11:34:49] ===============================================
+[2024-09-14 11:34:49] TEST TOOLS
+[2024-09-14 11:34:49] ===============================================
+[2024-09-14 11:34:49] Box IP: 192.168.1.21
+[2024-09-14 11:34:49] Check packages
+[2024-09-14 11:34:49] ssh checking
+[2024-09-14 11:34:49] ssh installed
+[2024-09-14 11:34:49] scp checking
+[2024-09-14 11:34:49] scp installed
+[2024-09-14 11:34:49] ping checking
+[2024-09-14 11:34:49] ping installed
+[2024-09-14 11:34:49] sshpass checking
+[2024-09-14 11:34:49] sshpass installed
+[2024-09-14 11:34:49] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 11:34:56] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 11:34:57] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 11:39:15] ===============================================
+[2024-09-14 11:39:15] TEST TOOLS
+[2024-09-14 11:39:15] ===============================================
+[2024-09-14 11:39:15] Box IP: 192.168.1.21
+[2024-09-14 11:39:15] Valid IP address, continue
+[2024-09-14 11:39:15] Check packages
+[2024-09-14 11:39:15] ssh checking
+[2024-09-14 11:39:15] ssh installed
+[2024-09-14 11:39:15] scp checking
+[2024-09-14 11:39:15] scp installed
+[2024-09-14 11:39:15] ping checking
+[2024-09-14 11:39:15] ping installed
+[2024-09-14 11:39:15] sshpass checking
+[2024-09-14 11:39:15] sshpass installed
+[2024-09-14 11:39:15] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 11:39:28] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 11:39:28] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done

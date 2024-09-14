@@ -25,7 +25,16 @@ box_ip=$1
 log "==============================================="
 log "TEST TOOLS"
 log "==============================================="
+# check_Box_IP
+box_ip=$1
 log "Box IP: $box_ip"
+
+if is_valid_ipv4 $box_ip; then
+  log "Valid IP address, continue"
+else
+  log "Invalid IP address. Please check again."
+  exit 1
+fi
 
 # Check packages
 log "Check packages"
@@ -38,11 +47,12 @@ check_package sshpass
 chmod +x "${scripts_dir}"/*.sh
 
 # Check if the box is reachable
-if ! ping -c 1 $box_ip > /dev/null 2>&1; then
-  log "Box with IP $box_ip is not reachable."
-  exit 1
-else
+if ping_test $box_ip ; then
   log "Host $box_ip is reachable => LAN okie"
+else
+  log "Host $box_ip is not reachable"
+  echo $STATUS_LAN_ETH0_ERROR
+  exit 1
 fi
 
 # Prompt for password
