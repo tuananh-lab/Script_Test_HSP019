@@ -3,15 +3,15 @@
 # Log file path
 export log_file="remote_test.log"
 
-current_dir="$(cd "$(dirname "$0")" && pwd)"
-result=0
-
-# Add libs
-. ${current_dir}/common/common.sh
-. ${current_dir}/error/error.sh
-
 # Set the directory containing the test scripts
-scripts_dir="$(get_current_dir "$0")/remote/scripts"
+current_dir="$(cd "$(dirname "$0")" && pwd)"
+scripts_dir="${current_dir}/remote/scripts"
+
+# Add libs (use correct path)
+. "${current_dir}/common/common.sh"
+. "${current_dir}/error/error.sh"
+
+result=0
 
 # Check if IP address is provided
 if [ -z "$1" ]; then
