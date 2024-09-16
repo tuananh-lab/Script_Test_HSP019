@@ -81,20 +81,3 @@ get_current_dir() {
     current_dir="$(cd "$(dirname "$1")" && pwd)"
     echo "$current_dir"
 }
-
-update_path() {
-    # Define the directories to check for in the PATH
-    required_dirs=("/usr/local/sbin" "/usr/sbin" "/sbin")
-
-    # Check if each required directory is in the PATH
-    for dir in "${required_dirs[@]}"; do
-        if [[ ":$PATH:" != *":$dir:"* ]]; then
-            # Directory is missing from the PATH, so add it
-            export PATH="$PATH:$dir"
-            log "Added $dir to PATH"
-        fi
-    done
-
-    # Optionally, you can print the updated PATH
-    log "Updated PATH: $PATH"
-}
