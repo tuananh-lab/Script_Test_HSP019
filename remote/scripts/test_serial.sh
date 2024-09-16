@@ -22,6 +22,15 @@ log() {
     echo "$1" | tee -a "$log_file"
 }
 
+# Check file exist
+file_exists() {
+    if [ -f "$1" ]; then
+        return 0  # File exists
+    else
+        return 1  # File does not exist
+    fi
+}
+
 # Start testing
 log "Testing Serial Port"
 

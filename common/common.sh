@@ -18,7 +18,7 @@ folder_exists() {
     fi
 }
 
-# Check folder exist
+# Check file exist
 file_exists() {
     if [ -f "$1" ]; then
         return 0  # File exists
