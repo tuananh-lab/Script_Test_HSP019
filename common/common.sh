@@ -9,20 +9,6 @@ log() {
     echo "[$timestamp] $log_msg" | tee -a "$log_file"
 }
 
-logcat() {
-    local file="$1"
-    local timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
-
-    # Store the file contents in cat_output
-    cat_output="$(cat $file)"  # Replace "file.txt" with the actual file name
-
-    # Use echo and command substitution to iterate through lines
-    while IFS= read -r line; do
-        # Print the message to the console
-        echo "[$timestamp] $line"
-    done <<< "$cat_output"
-}
-
 # Check folder exist
 folder_exists() {
     if [ -d "$1" ]; then
