@@ -1652,3 +1652,460 @@ Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC)
 Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
 Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
 USB Hub test done
+[2024-09-14 13:01:38] ===============================================
+[2024-09-14 13:01:38] TEST TOOLS
+[2024-09-14 13:01:38] ===============================================
+[2024-09-14 13:01:38] Box IP: 192.168.1.21
+[2024-09-14 13:01:38] Valid IP address, continue
+[2024-09-14 13:01:38] Check packages
+[2024-09-14 13:01:38] ssh checking
+[2024-09-14 13:01:38] ssh installed
+[2024-09-14 13:01:38] scp checking
+[2024-09-14 13:01:38] scp installed
+[2024-09-14 13:01:38] ping checking
+[2024-09-14 13:01:38] ping installed
+[2024-09-14 13:01:38] sshpass checking
+[2024-09-14 13:01:38] sshpass installed
+[2024-09-14 13:01:38] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:01:49] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_ram.sh on 192.168.1.21...
+[2024-09-14 13:01:50] Testing RAM
+Total Memory: 7.1Gi
+RAM test done
+[2024-09-14 13:07:43] ===============================================
+[2024-09-14 13:07:43] TEST TOOLS
+[2024-09-14 13:07:43] ===============================================
+[2024-09-14 13:07:43] Box IP: 192.168.1.21
+[2024-09-14 13:07:43] Valid IP address, continue
+[2024-09-14 13:07:43] Check packages
+[2024-09-14 13:07:43] ssh checking
+[2024-09-14 13:07:43] ssh installed
+[2024-09-14 13:07:43] scp checking
+[2024-09-14 13:07:43] scp installed
+[2024-09-14 13:07:43] ping checking
+[2024-09-14 13:07:43] ping installed
+[2024-09-14 13:07:43] sshpass checking
+[2024-09-14 13:07:43] sshpass installed
+[2024-09-14 13:07:43] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:07:52] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 13:07:52] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 13:14:39] ===============================================
+[2024-09-14 13:14:39] TEST TOOLS
+[2024-09-14 13:14:39] ===============================================
+[2024-09-14 13:14:39] Box IP: 192.168.1.21
+[2024-09-14 13:14:39] Valid IP address, continue
+[2024-09-14 13:14:39] Check packages
+[2024-09-14 13:14:39] ssh checking
+[2024-09-14 13:14:39] ssh installed
+[2024-09-14 13:14:39] scp checking
+[2024-09-14 13:14:39] scp installed
+[2024-09-14 13:14:39] ping checking
+[2024-09-14 13:14:39] ping installed
+[2024-09-14 13:14:39] sshpass checking
+[2024-09-14 13:14:39] sshpass installed
+[2024-09-14 13:14:39] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:14:47] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:14:51] bash: line 7: /root/../../common/common.sh: No such file or directory
+bash: line 8: /root/../../error/error.sh: No such file or directory
+Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:18:57] ===============================================
+[2024-09-14 13:18:57] TEST TOOLS
+[2024-09-14 13:18:57] ===============================================
+[2024-09-14 13:18:57] Box IP: 192.168.1.21
+[2024-09-14 13:18:57] Valid IP address, continue
+[2024-09-14 13:18:57] Check packages
+[2024-09-14 13:18:57] ssh checking
+[2024-09-14 13:18:58] ssh installed
+[2024-09-14 13:18:58] scp checking
+[2024-09-14 13:18:58] scp installed
+[2024-09-14 13:18:58] ping checking
+[2024-09-14 13:18:58] ping installed
+[2024-09-14 13:18:58] sshpass checking
+[2024-09-14 13:18:58] sshpass installed
+[2024-09-14 13:18:58] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:19:05] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:19:10] bash: line 7: /root/../../common/common.sh: No such file or directory
+bash: line 8: /root/../../error/error.sh: No such file or directory
+Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:21:10] ===============================================
+[2024-09-14 13:21:10] TEST TOOLS
+[2024-09-14 13:21:10] ===============================================
+[2024-09-14 13:21:11] Box IP: 192.168.1.21
+[2024-09-14 13:21:11] Valid IP address, continue
+[2024-09-14 13:21:11] Check packages
+[2024-09-14 13:21:11] ssh checking
+[2024-09-14 13:21:11] ssh installed
+[2024-09-14 13:21:11] scp checking
+[2024-09-14 13:21:11] scp installed
+[2024-09-14 13:21:11] ping checking
+[2024-09-14 13:21:11] ping installed
+[2024-09-14 13:21:11] sshpass checking
+[2024-09-14 13:21:11] sshpass installed
+[2024-09-14 13:21:11] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:21:19] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:21:24] bash: line 7: /root/../../common/common.sh: No such file or directory
+bash: line 8: /root/../../error/error.sh: No such file or directory
+Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:22:37] ===============================================
+[2024-09-14 13:22:37] TEST TOOLS
+[2024-09-14 13:22:37] ===============================================
+[2024-09-14 13:22:37] Box IP: 192.168.1.21
+[2024-09-14 13:22:37] Valid IP address, continue
+[2024-09-14 13:22:37] Check packages
+[2024-09-14 13:22:37] ssh checking
+[2024-09-14 13:22:37] ssh installed
+[2024-09-14 13:22:37] scp checking
+[2024-09-14 13:22:37] scp installed
+[2024-09-14 13:22:37] ping checking
+[2024-09-14 13:22:37] ping installed
+[2024-09-14 13:22:37] sshpass checking
+[2024-09-14 13:22:37] sshpass installed
+[2024-09-14 13:22:37] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:22:43] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:22:48] bash: line 7: /root/../../common/common.sh: No such file or directory
+bash: line 8: /root/../../error/error.sh: No such file or directory
+Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:23:50] ===============================================
+[2024-09-14 13:23:50] TEST TOOLS
+[2024-09-14 13:23:50] ===============================================
+[2024-09-14 13:23:50] Box IP: 192.168.1.21
+[2024-09-14 13:23:50] Valid IP address, continue
+[2024-09-14 13:23:50] Check packages
+[2024-09-14 13:23:50] ssh checking
+[2024-09-14 13:23:50] ssh installed
+[2024-09-14 13:23:50] scp checking
+[2024-09-14 13:23:50] scp installed
+[2024-09-14 13:23:50] ping checking
+[2024-09-14 13:23:50] ping installed
+[2024-09-14 13:23:50] sshpass checking
+[2024-09-14 13:23:50] sshpass installed
+[2024-09-14 13:23:50] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:23:55] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:23:59] bash: line 7: /home/tuananh/HSP-019/HSP019_Test/common/common.sh: No such file or directory
+bash: line 8: /home/tuananh/HSP-019/HSP019_Test/error/error.sh: No such file or directory
+Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:28:19] ===============================================
+[2024-09-14 13:28:19] TEST TOOLS
+[2024-09-14 13:28:19] ===============================================
+[2024-09-14 13:28:19] Box IP: 192.168.1.21
+[2024-09-14 13:28:19] Valid IP address, continue
+[2024-09-14 13:28:19] Check packages
+[2024-09-14 13:28:19] ssh checking
+[2024-09-14 13:28:19] ssh installed
+[2024-09-14 13:28:19] scp checking
+[2024-09-14 13:28:19] scp installed
+[2024-09-14 13:28:19] ping checking
+[2024-09-14 13:28:19] ping installed
+[2024-09-14 13:28:19] sshpass checking
+[2024-09-14 13:28:19] sshpass installed
+[2024-09-14 13:28:19] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:28:26] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:28:31] bash: line 7: /root/../../common/common.sh: No such file or directory
+bash: line 8: /root/../../error/error.sh: No such file or directory
+Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:29:31] ===============================================
+[2024-09-14 13:29:31] TEST TOOLS
+[2024-09-14 13:29:31] ===============================================
+[2024-09-14 13:29:31] Box IP: 192.168.1.21
+[2024-09-14 13:29:31] Valid IP address, continue
+[2024-09-14 13:29:31] Check packages
+[2024-09-14 13:29:31] ssh checking
+[2024-09-14 13:29:31] ssh installed
+[2024-09-14 13:29:31] scp checking
+[2024-09-14 13:29:31] scp installed
+[2024-09-14 13:29:31] ping checking
+[2024-09-14 13:29:31] ping installed
+[2024-09-14 13:29:31] sshpass checking
+[2024-09-14 13:29:31] sshpass installed
+[2024-09-14 13:29:31] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:29:38] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-14 13:29:42] Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-14 13:41:51] ===============================================
+[2024-09-14 13:41:51] TEST TOOLS
+[2024-09-14 13:41:51] ===============================================
+[2024-09-14 13:41:51] Box IP: 192.168.1.21
+[2024-09-14 13:41:51] Valid IP address, continue
+[2024-09-14 13:41:51] Check packages
+[2024-09-14 13:41:51] ssh checking
+[2024-09-14 13:41:51] ssh installed
+[2024-09-14 13:41:51] scp checking
+[2024-09-14 13:41:51] scp installed
+[2024-09-14 13:41:51] ping checking
+[2024-09-14 13:41:51] ping installed
+[2024-09-14 13:41:51] sshpass checking
+[2024-09-14 13:41:51] sshpass installed
+[2024-09-14 13:41:51] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:41:56] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-14 13:41:57] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-14 13:54:36] ===============================================
+[2024-09-14 13:54:36] TEST TOOLS
+[2024-09-14 13:54:36] ===============================================
+[2024-09-14 13:54:36] Box IP: 192.168.1.21
+[2024-09-14 13:54:36] Valid IP address, continue
+[2024-09-14 13:54:36] Check packages
+[2024-09-14 13:54:36] ssh checking
+[2024-09-14 13:54:36] ssh installed
+[2024-09-14 13:54:36] scp checking
+[2024-09-14 13:54:36] scp installed
+[2024-09-14 13:54:36] ping checking
+[2024-09-14 13:54:36] ping installed
+[2024-09-14 13:54:36] sshpass checking
+[2024-09-14 13:54:36] sshpass installed
+[2024-09-14 13:54:36] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-14 13:54:43] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_type_a.sh on 192.168.1.21...
+[2024-09-14 13:54:44] Testing USB TYPE-A (4 ports)
+Displaying USB information for all ports
+/:  Bus 05.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 5000M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 1: Dev 3, If 0, Class=Vendor Specific Class, Driver=lan78xx, 5000M
+        |__ Port 4: Dev 4, If 0, Class=Hub, Driver=hub/4p, 5000M
+/:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/5p, 480M
+        |__ Port 4: Dev 3, If 0, Class=Hub, Driver=hub/5p, 480M
+            |__ Port 5: Dev 5, If 0, Class=Vendor Specific Class, Driver=, 480M
+        |__ Port 5: Dev 4, If 0, Class=Vendor Specific Class, Driver=, 480M
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/0p, 5000M
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=dummy_hcd/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Vendor Specific Class, Driver=, 480M
+    |__ Port 1: Dev 2, If 1, Class=Vendor Specific Class, Driver=, 480M
+USB TYPE-A (4 ports) test done
+[2024-09-16 09:32:50] ===============================================
+[2024-09-16 09:32:50] TEST TOOLS
+[2024-09-16 09:32:50] ===============================================
+[2024-09-16 09:32:50] Box IP: 192.168.1.21
+[2024-09-16 09:32:50] Valid IP address, continue
+[2024-09-16 09:32:50] Check packages
+[2024-09-16 09:32:50] ssh checking
+[2024-09-16 09:32:50] ssh installed
+[2024-09-16 09:32:50] scp checking
+[2024-09-16 09:32:50] scp installed
+[2024-09-16 09:32:50] ping checking
+[2024-09-16 09:32:50] ping installed
+[2024-09-16 09:32:50] sshpass checking
+[2024-09-16 09:32:50] sshpass installed
+[2024-09-16 09:32:50] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 09:32:58] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh on 192.168.1.21...
+[2024-09-16 09:32:59] Testing USB Hub
+Microchip Technology Devices Found:
+Bus 005 Device 004: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 005 Device 003: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) USB5744
+Bus 005 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 004: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC) 
+Bus 004 Device 003: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+Bus 004 Device 002: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+USB Hub test done
+[2024-09-16 09:56:23] ===============================================
+[2024-09-16 09:56:23] TEST TOOLS
+[2024-09-16 09:56:23] ===============================================
+[2024-09-16 09:56:23] Box IP: 192.168.1.21
+[2024-09-16 09:56:23] Valid IP address, continue
+[2024-09-16 09:56:23] Check packages
+[2024-09-16 09:56:23] ssh checking
+[2024-09-16 09:56:23] ssh installed
+[2024-09-16 09:56:23] scp checking
+[2024-09-16 09:56:23] scp installed
+[2024-09-16 09:56:23] ping checking
+[2024-09-16 09:56:23] ping installed
+[2024-09-16 09:56:23] sshpass checking
+[2024-09-16 09:56:23] sshpass installed
+[2024-09-16 09:56:23] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 09:56:28] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_power.sh on 192.168.1.21...
+[2024-09-16 09:56:29] Testing power
+Please plug in the power cord and check the console log
+Account to login is root, password is oelinux123
+Power test done
+[2024-09-16 09:56:45] ===============================================
+[2024-09-16 09:56:45] TEST TOOLS
+[2024-09-16 09:56:45] ===============================================
+[2024-09-16 09:56:45] Box IP: 192.168.1.21
+[2024-09-16 09:56:45] Valid IP address, continue
+[2024-09-16 09:56:45] Check packages
+[2024-09-16 09:56:45] ssh checking
+[2024-09-16 09:56:45] ssh installed
+[2024-09-16 09:56:45] scp checking
+[2024-09-16 09:56:45] scp installed
+[2024-09-16 09:56:45] ping checking
+[2024-09-16 09:56:45] ping installed
+[2024-09-16 09:56:45] sshpass checking
+[2024-09-16 09:56:45] sshpass installed
+[2024-09-16 09:56:45] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 09:56:53] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_serial.sh on 192.168.1.21...
+[2024-09-16 09:56:54] Testing Serial Port
+Serial Number: 502c8105
+SERIAL_OK: 502c8105
+Serial test done
+[2024-09-16 09:57:07] ===============================================
+[2024-09-16 09:57:07] TEST TOOLS
+[2024-09-16 09:57:07] ===============================================
+[2024-09-16 09:57:07] Box IP: 192.168.1.21
+[2024-09-16 09:57:07] Valid IP address, continue
+[2024-09-16 09:57:07] Check packages
+[2024-09-16 09:57:07] ssh checking
+[2024-09-16 09:57:07] ssh installed
+[2024-09-16 09:57:07] scp checking
+[2024-09-16 09:57:07] scp installed
+[2024-09-16 09:57:07] ping checking
+[2024-09-16 09:57:07] ping installed
+[2024-09-16 09:57:07] sshpass checking
+[2024-09-16 09:57:07] sshpass installed
+[2024-09-16 09:57:07] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 09:57:13] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_ram.sh on 192.168.1.21...
+[2024-09-16 09:57:14] Testing RAM
+Total Memory: 7.1Gi
+RAM test done
+[2024-09-16 10:03:08] ===============================================
+[2024-09-16 10:03:08] TEST TOOLS
+[2024-09-16 10:03:08] ===============================================
+[2024-09-16 10:03:08] Box IP: 192.168.1.21
+[2024-09-16 10:03:08] Valid IP address, continue
+[2024-09-16 10:03:08] Check packages
+[2024-09-16 10:03:08] ssh checking
+[2024-09-16 10:03:08] ssh installed
+[2024-09-16 10:03:08] scp checking
+[2024-09-16 10:03:08] scp installed
+[2024-09-16 10:03:08] ping checking
+[2024-09-16 10:03:08] ping installed
+[2024-09-16 10:03:08] sshpass checking
+[2024-09-16 10:03:08] sshpass installed
+[2024-09-16 10:03:08] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 10:03:20] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh on 192.168.1.21...
+[2024-09-16 10:03:24] Testing Alarm IO
+Setting gpio457 to 1
+Setting gpio457 to 0
+Setting gpio459 to 1
+Setting gpio459 to 0
+Alarm IO test completed. Listen for relay clicks.
+Alarm IO test done
+[2024-09-16 10:08:57] ===============================================
+[2024-09-16 10:08:57] TEST TOOLS
+[2024-09-16 10:08:57] ===============================================
+[2024-09-16 10:08:57] Box IP: 192.168.1.21
+[2024-09-16 10:08:57] Valid IP address, continue
+[2024-09-16 10:08:57] Check packages
+[2024-09-16 10:08:57] ssh checking
+[2024-09-16 10:08:57] ssh installed
+[2024-09-16 10:08:57] scp checking
+[2024-09-16 10:08:57] scp installed
+[2024-09-16 10:08:57] ping checking
+[2024-09-16 10:08:57] ping installed
+[2024-09-16 10:08:57] sshpass checking
+[2024-09-16 10:08:57] sshpass installed
+[2024-09-16 10:08:57] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 10:09:03] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_type_a.sh on 192.168.1.21...
+[2024-09-16 10:09:04] Testing USB TYPE-A (4 ports)
+Displaying USB information for all ports
+/:  Bus 05.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 5000M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 5000M
+        |__ Port 1: Dev 3, If 0, Class=Vendor Specific Class, Driver=lan78xx, 5000M
+        |__ Port 4: Dev 4, If 0, Class=Hub, Driver=hub/4p, 5000M
+/:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/5p, 480M
+        |__ Port 4: Dev 3, If 0, Class=Hub, Driver=hub/5p, 480M
+            |__ Port 5: Dev 5, If 0, Class=Vendor Specific Class, Driver=, 480M
+        |__ Port 5: Dev 4, If 0, Class=Vendor Specific Class, Driver=, 480M
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/0p, 5000M
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci-hcd/1p, 480M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=dummy_hcd/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Vendor Specific Class, Driver=, 480M
+    |__ Port 1: Dev 2, If 1, Class=Vendor Specific Class, Driver=, 480M
+USB TYPE-A (4 ports) test done
+[2024-09-16 10:09:11] ===============================================
+[2024-09-16 10:09:11] TEST TOOLS
+[2024-09-16 10:09:11] ===============================================
+[2024-09-16 10:09:11] Box IP: 192.168.1.21
+[2024-09-16 10:09:11] Valid IP address, continue
+[2024-09-16 10:09:11] Check packages
+[2024-09-16 10:09:11] ssh checking
+[2024-09-16 10:09:11] ssh installed
+[2024-09-16 10:09:11] scp checking
+[2024-09-16 10:09:11] scp installed
+[2024-09-16 10:09:11] ping checking
+[2024-09-16 10:09:11] ping installed
+[2024-09-16 10:09:11] sshpass checking
+[2024-09-16 10:09:11] sshpass installed
+[2024-09-16 10:09:11] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 10:09:22] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_rtc.sh on 192.168.1.21...
+[2024-09-16 10:09:23] Testing RTC
+RTC Date: 1970-01-01
+RTC Time: 00:16:14
+RTC test done
+[2024-09-16 10:09:32] ===============================================
+[2024-09-16 10:09:32] TEST TOOLS
+[2024-09-16 10:09:32] ===============================================
+[2024-09-16 10:09:32] Box IP: 192.168.1.21
+[2024-09-16 10:09:32] Valid IP address, continue
+[2024-09-16 10:09:32] Check packages
+[2024-09-16 10:09:32] ssh checking
+[2024-09-16 10:09:32] ssh installed
+[2024-09-16 10:09:32] scp checking
+[2024-09-16 10:09:32] scp installed
+[2024-09-16 10:09:32] ping checking
+[2024-09-16 10:09:32] ping installed
+[2024-09-16 10:09:32] sshpass checking
+[2024-09-16 10:09:32] sshpass installed
+[2024-09-16 10:09:32] Host 192.168.1.21 is reachable => LAN okie
+[2024-09-16 10:09:40] Executing /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_GPIO.sh on 192.168.1.21...
+[2024-09-16 10:09:41] Testing GPIO
+GPIO test completed. Please check the voltage on pins 2, 3, 4, 5 of J1101 for 1.8V.
+GPIO test done
