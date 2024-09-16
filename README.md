@@ -1,4 +1,4 @@
-# Guide for Using the Test_HSP019 Directory to Test AIBOX Functionality
+# Guide for Using the HSP019_Test Directory to Test AIBOX Functionality
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -9,28 +9,30 @@
 
 ## Introduction
 
-The `Test_HSP019` directory provides scripts and resources necessary for testing the functionalities of the AIBOX device. Use the files in this directory to conduct tests and verify the operation of various AIBOX functions.
+The `HSP019_Test` directory provides scripts and resources necessary for testing the functionalities of the AIBOX device. Use the files in this directory to conduct tests and verify the operation of various AIBOX functions.
 
 ## Directory Structure
 
 - **`asset/`**: Contains images related to function testing.
 - **`common/`**: Contains the `common.sh` file, which defines shared macros used during testing.
 - **`error/`**: Contains the `error.sh` file, which defines macros related to errors during testing.
-- **`remote/`**: Contains scripts for testing specific functions and the file `testfull.sh` for checking all functions.
+- **`remote/`**: Include scripts directory contain scripts testing specific functions, result directory contain result file for each script file in scripts directory,  file `testfull.sh` for checking all functions and file `testfull.log` contain log result when run `testfull.sh`. 
 - **`test.sh`**: The main executable file used to test functions.
+- **`remote_test.sh`**: The executable file used to remote test function via IP address.
+- **`remote_test.log`**: File contain log result when run `remote_test.log`.
 
 ## Usage Instructions
 
 ### I. Test Each Function
 
-1. **Access the box via SSH using its IP address:**
+1. **Access the box via SSH using IP address:**
     ```bash
     ssh IP_of_box
     ```
 
 2. **Navigate to the directory containing the `test.sh` file:**
     ```bash
-    cd /dir/Test_HSP019
+    cd /dir/HSP019_Test
     ```
 
 3. **Grant execution permission to the `test.sh` file:**
@@ -107,7 +109,7 @@ You just need to select the function you want to test by entering the correspond
 
 2. **Navigate to the `remote` directory:**
     ```bash
-    cd /dir/Test_HSP019/remote
+    cd /dir/HSP019_Test/remote
     ```
 
 3. **Grant execution permission to the `testfull.sh` file:**
@@ -119,6 +121,7 @@ You just need to select the function you want to test by entering the correspond
     ```bash
     ./testfull.sh
     ```
+5. All files result of each functions test have in result directory and it contained in `testfull.log`
 
 ### III. Test Remotely Through Box IP Address
 
@@ -130,7 +133,7 @@ You just need to select the function you want to test by entering the correspond
 
 2. **Navigate to the directory containing the `remote_test.sh` file:**
     ```bash
-    cd /dir/Test_HSP019
+    cd /dir/HSP019_Test
     ```
 
 3. **Grant execution permission to the `remote_test.sh` file:**
@@ -144,7 +147,7 @@ You just need to select the function you want to test by entering the correspond
     ```
 
 5. **Enter the password `oelinux123` and select the function to test from the list.**
-
+6. Log result it contained in `remote_test.log`
 ## Function List
 
 - **Power**: Tests the functionality of the power.
