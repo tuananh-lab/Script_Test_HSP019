@@ -7,15 +7,15 @@ current_dir="$(cd "$(dirname "$0")" && pwd)"
 . ${current_dir}/../common/common.sh
 . ${current_dir}/../error/error.sh
 
-# set log file location
-export log_file="${current_dir}/full_test.log"
+# Set log file location
+export log_file="${current_dir}/testfull.log"
 echo -n "" > $log_file
 
 # Ensure all scripts have executable permissions
 chmod +x ${current_dir}/scripts/*.sh
 
 # Ensure log file has write permissions
-chmod +w "${current_dir}/full_test.log"
+chmod +w "$log_file"
 
 # Function to run each test and add a line separator
 run_test() {

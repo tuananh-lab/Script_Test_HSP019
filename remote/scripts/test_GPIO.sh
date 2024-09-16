@@ -2,6 +2,14 @@
 
 # Set current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
+parent_dir="$(dirname "$current_dir")"
+result_dir="$parent_dir/result"
+
+# Create the "result" directory if it doesn't exist
+mkdir -p "$result_dir"
+
+# Define log file location
+log_file="$result_dir/test_GPIO_results.txt"
 
 # Check for root privileges
 if [ "$EUID" -ne 0 ]; then
@@ -17,7 +25,7 @@ gpio_pins=("372" "373" "374" "375")
 
 # Define logging function
 log() {
-    echo "$1"
+    echo "$1" | tee -a "$log_file"
 }
 
 # Define function to export GPIO

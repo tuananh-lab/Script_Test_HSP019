@@ -1,0 +1,97 @@
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_alarm_IO.sh
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Alarm IO test failed.
+Alarm IO test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_camera.sh
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Enter your choice (1-3): Exiting...
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_DP.sh
+Testing DP(Display Port)...
+Please plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Display port test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_GPIO.sh
+Please run the script as root.
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_lan7800.sh
+Testing LAN7800
+Network interface eth0 not found or has no data.
+LAN7800 test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_lte.sh
+Testing LTE 4G
+LTE_4G_DEVICE_NOT_FOUND
+LTE 4G test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_nvme.sh
+Testing NVMe
+NVMe Device Information:
+NVME_DEVICE_OK: brw-rw---- 1 root disk 259, 0 Thg 9  16 08:45 /dev/nvme0n1
+NVMe test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_power.sh
+Testing power
+Please supply power to box and check the console log
+Account to login is root, password is oelinux123
+Power test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_ram.sh
+Testing RAM
+Total Memory: 15Gi
+RAM test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_rom.sh
+Testing ROM
+Total Flash: 76G
+ROM test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_rtc.sh
+Testing RTC
+RTC Date: 2024-09-16
+RTC Time: 03:50:48
+RTC test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_sd_card.sh
+Testing SD Card
+SD device /dev/mmcblk1p1 does not exist.
+SD_DEVICE_NOT_FOUND
+SD Card test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_hub.sh
+Testing USB Hub
+No Microchip Technology devices found.
+NO_MICROCHIP_DEVICES_FOUND
+USB Hub test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_usb_type_a.sh
+Testing USB TYPE-A (4 ports)
+Displaying USB information for all ports
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/8p, 10000M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/16p, 480M
+    |__ Port 3: Dev 2, If 0, Class=Human Interface Device, Driver=usbhid, 1.5M
+    |__ Port 5: Dev 3, If 0, Class=Human Interface Device, Driver=usbhid, 1.5M
+    |__ Port 5: Dev 3, If 1, Class=Human Interface Device, Driver=usbhid, 1.5M
+    |__ Port 6: Dev 4, If 2, Class=Human Interface Device, Driver=, 12M
+    |__ Port 6: Dev 4, If 0, Class=Communications, Driver=cdc_acm, 12M
+    |__ Port 6: Dev 4, If 1, Class=CDC Data, Driver=cdc_acm, 12M
+USB TYPE-A (4 ports) test done
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_serial.sh
+Testing Serial Port
+/home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_serial.sh: line 29: file_exists: command not found
+Serial file /etc/adb_devid does not exist.
+SERIAL_FILE_NOT_FOUND
+
+Running test: /home/tuananh/HSP-019/HSP019_Test/remote/scripts/test_reset_button.sh
+Testing Reset Button
+GPIO path /sys/class/gpio/gpio360/value does not exist.
+GPIO_PATH_NOT_FOUND
+

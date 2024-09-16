@@ -2,15 +2,24 @@
 
 # Set current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
+parent_dir="$(dirname "$current_dir")"
+result_dir="$parent_dir/result"
+
+# Create the "result" directory if it doesn't exist
+mkdir -p "$result_dir"
+
+# Define GPIO path for the reset button
 gpio_path="/sys/class/gpio/gpio360/value"
 
+# Define log file location
+log_file="$result_dir/test_reset_button_results.txt"
 
 # Initialize result variable
 result=0
 
 # Define logging function
 log() {
-    echo "$1"
+    echo "$1" | tee -a "$log_file"
 }
 
 # Define function to check if a file exists
