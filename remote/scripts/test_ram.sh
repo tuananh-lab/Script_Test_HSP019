@@ -6,7 +6,10 @@ parent_dir="$(dirname "$current_dir")"
 result_dir="$parent_dir/result"
 
 # Create the "result" directory if it doesn't exist
-mkdir -p "$result_dir"
+if ! mkdir -p "$result_dir"; then
+    echo -e "${RED}Error: Failed to create result directory.${NC}" >&2
+    exit 1
+fi
 
 # Define log file location
 log_file="$result_dir/test_ram_results.txt"
@@ -19,17 +22,31 @@ log() {
     echo "$1" | tee -a "$log_file"
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing RAM"
 
 # Run the 'free -h' command and store the output in a variable
-free_output=$(free -h)
+if ! free_output=$(free -h); then
+    log -e "${RED}Error: Failed to run 'free -h' command.${NC}"
+    result=1
+    exit $result
+fi
 
 # Extract the total memory using awk
 total_memory=$(echo "$free_output" | awk '/^Mem:/ {print $2}')
+if [ -z "$total_memory" ]; then
+    log -e "${RED}Error: Failed to extract total memory.${NC}"
+    result=1
+    exit $result
+fi
 
 # Print the total memory
 log "Total Memory: $total_memory"
-
-log "RAM test done"
+echo -e "${GREEN}${BOLD}PASS${NC}"
 exit $result

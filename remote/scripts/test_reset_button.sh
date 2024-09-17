@@ -27,6 +27,12 @@ file_exists() {
     [ -e "$1" ]
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing Reset Button"
 
@@ -34,6 +40,7 @@ log "Testing Reset Button"
 if ! file_exists "$gpio_path"; then
     log "GPIO path $gpio_path does not exist."
     echo "GPIO_PATH_NOT_FOUND"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
     exit $result
 fi
@@ -45,6 +52,7 @@ log "Initial GPIO value: $initial_value"
 if [ "$initial_value" -ne 1 ]; then
     log "Initial GPIO value is not 1. Check the button state."
     echo "INITIAL_VALUE_ERROR"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
     exit $result
 fi
@@ -59,12 +67,11 @@ log "GPIO value after pressing the button: $pressed_value"
 
 if [ "$pressed_value" -ne 0 ]; then
     log "GPIO value after pressing the button is not 0. Check the button functionality."
-    echo "BUTTON_PRESS_ERROR"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
 else
     log "Button functionality is correct. GPIO value after pressing the button is 0."
-    echo "BUTTON_OK"
+    echo -e "${GREEN}${BOLD}PASS${NC}"
 fi
 
-log "Reset button test done"
 exit $result

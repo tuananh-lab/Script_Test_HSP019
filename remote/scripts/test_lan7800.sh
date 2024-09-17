@@ -6,7 +6,10 @@ parent_dir="$(dirname "$current_dir")"
 result_dir="$parent_dir/result"
 
 # Create the "result" directory if it doesn't exist
-mkdir -p "$result_dir"
+if ! mkdir -p "$result_dir"; then
+    echo -e "${RED}Error: Failed to create result directory.${NC}" >&2
+    exit 1
+fi
 
 # Define log file location
 log_file="$result_dir/test_lan7800_results.txt"
@@ -19,25 +22,37 @@ log() {
     echo "$1" | tee -a "$log_file"
 }
 
-# Define function to check if a file exists
-file_exists() {
-    [ -e "$1" ]
-}
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
 
 # Start testing
 log "Testing LAN7800"
 
-# Run the 'ifconfig' command and store the output in a variable
-ifconfig_output=$(ifconfig eth0 2>/dev/null)
+# Check network connectivity by pinging Google's DNS server with a 2-second timeout
+if timeout 2 ping -c 1 8.8.8.8 &>/dev/null; then
+    log "Network connectivity OK."
 
-# Check if 'ifconfig' command succeeded and contains data
-if [ -z "$ifconfig_output" ]; then
-    log "Network interface eth0 not found or has no data."
-    result=1
+    # Run the 'ifconfig' command and store the output in a variable
+    ifconfig_output=$(ifconfig eth0 2>/dev/null)
+
+    # Check if 'ifconfig' command succeeded and contains data
+    if [ -z "$ifconfig_output" ]; then
+        log "Network interface eth0 not found or has no data."
+        echo -e "${RED}${BOLD}FAIL${NC}"
+        result=1
+    else
+        log "Network interface eth0 found:"
+        log "$ifconfig_output"
+        echo -e "${GREEN}${BOLD}PASS${NC}"
+    fi
 else
-    log "Network interface eth0 found:"
-    log "$ifconfig_output"
+    log "No network connectivity, check plug cable or network configuration."
+    echo -e "${RED}${BOLD}FAIL${NC}"
+    result=1
 fi
 
-log "LAN7800 test done"
 exit $result
+

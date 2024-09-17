@@ -19,6 +19,12 @@ log() {
     echo "$1" | tee -a "$log_file"
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing USB Hub"
 
@@ -29,12 +35,13 @@ usb_devices=$(lsusb | grep "Microchip Technology")
 if [ -z "$usb_devices" ]; then
     log "No Microchip Technology devices found."
     echo "NO_MICROCHIP_DEVICES_FOUND"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
 else
     log "Microchip Technology Devices Found:"
     echo "$usb_devices"
+    echo -e "${GREEN}${BOLD}PASS${NC}"
 
 fi
 
-log "USB Hub test done"
 exit $result

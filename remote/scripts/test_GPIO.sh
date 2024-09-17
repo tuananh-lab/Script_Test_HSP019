@@ -23,6 +23,11 @@ result=0
 # Define GPIO pins
 gpio_pins=("372" "373" "374" "375")
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Define logging function
 log() {
     echo "$1" | tee -a "$log_file"
@@ -51,6 +56,7 @@ for gpio_pin in "${gpio_pins[@]}"; do
     export_gpio "$gpio_pin"
     if [ ! -e "/sys/class/gpio/gpio${gpio_pin}/value" ]; then
         log "GPIO pin $gpio_pin export failed or does not exist."
+        echo -e "${RED}${BOLD}FAIL${NC}"
         result=1
     fi
 done
@@ -62,9 +68,10 @@ if [ $result -eq 0 ]; then
     done
 
     log "GPIO test completed. Please check the voltage on pins 2, 3, 4, 5 of J1101 for 1.8V."
+    echo -e "${GREEN}${BOLD}PASS${NC}"
 else
     log "GPIO test failed."
+    echo -e "${RED}${BOLD}FAIL${NC}"
 fi
 
-log "GPIO test done"
 exit $result

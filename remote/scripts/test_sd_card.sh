@@ -27,6 +27,12 @@ file_exists() {
     [ -e "$1" ]
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing SD Card"
 
@@ -34,6 +40,7 @@ log "Testing SD Card"
 if ! file_exists "$sd_device"; then
     log "SD device $sd_device does not exist."
     echo "SD_DEVICE_NOT_FOUND"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
 else
     # Get detailed information about the SD device
@@ -42,12 +49,13 @@ else
     if [ -z "$sd_info" ]; then
         log "No information available for $sd_device."
         echo "SD_DEVICE_INFO_ERROR"
+        echo -e "${RED}${BOLD}FAIL${NC}"
         result=1
     else
         log "SD Device Information:"
         log "$sd_info"
+        echo -e "${GREEN}${BOLD}PASS${NC}"
     fi
 fi
 
-log "SD Card test done"
 exit $result

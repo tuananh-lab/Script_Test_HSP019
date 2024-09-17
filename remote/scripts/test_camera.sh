@@ -26,6 +26,12 @@ log() {
     echo "$1" | tee -a "$log_file"
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Function to view the camera feed
 view_camera() {
     local camera_id=$1

@@ -23,9 +23,16 @@ log() {
 file_exists() {
     [ -e "$1" ]
 }
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing power"
 log "Please supply power to box and check the console log"
 log "Account to login is root, password is oelinux123"
-log "Power test done"
+echo -e "${GREEN}${BOLD}PASS${NC}"
 exit $result

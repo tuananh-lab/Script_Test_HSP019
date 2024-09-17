@@ -28,6 +28,12 @@ file_exists() {
     [ -e "$1" ]
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing RTC"
 
@@ -52,6 +58,7 @@ if [ $result -eq 0 ]; then
     if [ -z "$rtc_date" ]; then
         log "Failed to read date from $date_file."
         echo "RTC_DATE_READ_ERROR"
+        echo -e "${RED}${BOLD}FAIL${NC}"
         result=1
     else
         log "RTC Date: $rtc_date"
@@ -60,11 +67,12 @@ if [ $result -eq 0 ]; then
     if [ -z "$rtc_time" ]; then
         log "Failed to read time from $time_file."
         echo "RTC_TIME_READ_ERROR"
+        echo -e "${RED}${BOLD}FAIL${NC}"
         result=1
     else
         log "RTC Time: $rtc_time"
+        echo -e "${GREEN}${BOLD}PASS${NC}"
     fi
 fi
 
-log "RTC test done"
 exit $result

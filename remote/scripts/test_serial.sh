@@ -31,6 +31,12 @@ file_exists() {
     fi
 }
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Start testing
 log "Testing Serial Port"
 
@@ -38,6 +44,7 @@ log "Testing Serial Port"
 if ! file_exists "$serial_file"; then
     log "Serial file $serial_file does not exist."
     echo "SERIAL_FILE_NOT_FOUND"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
     exit $result
 fi
@@ -48,12 +55,11 @@ serial_number=$(cat "$serial_file")
 # Check if the serial number is empty
 if [ -z "$serial_number" ]; then
     log "Serial number is empty."
-    echo "SERIAL_EMPTY"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
 else
     log "Serial Number: $serial_number"
-    echo "SERIAL_OK: $serial_number"
+    echo -e "${GREEN}${BOLD}PASS${NC}"
 fi
 
-log "Serial test done"
 exit $result

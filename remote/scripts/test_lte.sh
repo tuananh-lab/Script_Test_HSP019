@@ -17,6 +17,12 @@ log_file="$result_dir/test_lte_results.txt"
 # Initialize result variable
 result=0
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Define logging function
 log() {
     echo "$1" | tee -a "$log_file"
@@ -35,11 +41,12 @@ lsusb_output=$(lsusb)
 
 # Check for the LTE 4G device in the output
 if echo "$lsusb_output" | grep -q "$usb_id"; then
-    log "LTE 4G device found:"
+    log "LTE 4G DEVICE FOUND:"
+    echo -e "${GREEN}${BOLD}PASS${NC}"
 else
     echo "LTE_4G_DEVICE_NOT_FOUND"
+    echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
 fi
 
-log "LTE 4G test done"
 exit $result
