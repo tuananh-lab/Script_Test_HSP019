@@ -25,11 +25,6 @@ run_test() {
     echo "" | tee -a "$log_file"
 }
 
-# ALARM_IO
-run_test "${current_dir}/scripts/test_alarm_IO.sh"
-
-# CAMERA
-run_test "${current_dir}/scripts/test_camera.sh"
 
 # DP (Display Port)
 run_test "${current_dir}/scripts/test_DP.sh"
@@ -70,8 +65,14 @@ run_test "${current_dir}/scripts/test_usb_type_a.sh"
 # SERIAL
 run_test "${current_dir}/scripts/test_serial.sh"
 
+# ALARM_IO
+run_test "${current_dir}/scripts/test_alarm_IO.sh"
+
 # FACTORY_RESET_BUTTON
 run_test "${current_dir}/scripts/test_reset_button.sh"
+
+# CAMERA
+run_test "${current_dir}/scripts/test_camera.sh"
 
 # exit
 exit 0
