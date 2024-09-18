@@ -28,27 +28,19 @@ NC='\033[0m' # No Color
 # Start testing
 log "Testing LAN7800"
 
-# Check network connectivity by pinging Google's DNS server with a 2-second timeout
-if timeout 2 ping -c 1 8.8.8.8 &>/dev/null; then
-    log "Network connectivity OK."
+# Run the 'ifconfig' command and store the output in a variable
+ifconfig_output=$(ifconfig eth0 2>/dev/null)
 
-    # Run the 'ifconfig' command and store the output in a variable
-    ifconfig_output=$(ifconfig eth0 2>/dev/null)
-
-    # Check if 'ifconfig' command succeeded and contains data
-    if [ -z "$ifconfig_output" ]; then
-        log "Network interface eth0 not found or has no data."
-        echo -e "${RED}${BOLD}FAIL${NC}"
-        result=1
-    else
-        log "Network interface eth0 found:"
-        log "$ifconfig_output"
-        echo -e "${GREEN}${BOLD}PASS${NC}"
-    fi
+# Check if 'ifconfig' command succeeded and contains an IP address
+if echo "$ifconfig_output" | grep -q "inet "; then
+    log "Network interface eth0 has an IP address:"
+    log "$ifconfig_output"
+    echo -e "${GREEN}${BOLD}PASS${NC}"
 else
-    log "No network connectivity, check plug cable or network configuration."
+    log "Network interface eth0 does not have an IP address or is not found."
     echo -e "${RED}${BOLD}FAIL${NC}"
     result=1
 fi
 
 exit $result
+

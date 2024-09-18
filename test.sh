@@ -49,10 +49,10 @@ case $choice in
     9) ${scripts_dir}/test_rtc.sh ;;
     10) ${scripts_dir}/test_lte.sh ;;
     11) ${scripts_dir}/test_lan7800.sh ;;
-    12) ${scripts_dir}/test_gpio.sh ;;
+    12) ${scripts_dir}/test_GPIO.sh ;;
     13) ${scripts_dir}/test_alarm_IO.sh ;;
     14) ${scripts_dir}/test_usb_type_a.sh ;;
-    15) ${scripts_dir}/test_reset_button ;;
+    15) ${scripts_dir}/test_reset_button.sh ;;
     16) ${scripts_dir}/test_camera.sh ;;
     17) echo "Exiting..."; exit 0 ;;
     *) echo "Invalid choice. Please select a number between 1 and 17." ;;
