@@ -62,20 +62,20 @@ echo
 # Main script
 echo "Select a function to test on AIBOX QCS6490:"
 echo "1. Power"
-echo "2. Serial Port"
-echo "3. RAM"
-echo "4. ROM"
-echo "5. USB HUB 3.0"
-echo "6. USB TYPE-A (4 ports)"
+echo "2. DP(Display Port)"
+echo "3. Serial Port"
+echo "4. RAM"
+echo "5. ROM"
+echo "6. USB HUB 3.0"
 echo "7. SD Card"
-echo "8. Factory Reset Button"
-echo "9. NVMe"
-echo "10. RTC"
-echo "11. LTE 4G"
-echo "12. LAN7800"
+echo "8. NVMe"
+echo "9. RTC"
+echo "10. LTE 4G"
+echo "11. LAN7800"
+echo "12. GPIO"
 echo "13. Alarm IO"
-echo "14. DP (Display Port)"
-echo "15. GPIO"
+echo "14. USB TYPE-A (4 ports)"
+echo "15. Factory Reset Button"
 echo "16. Camera"
 echo "17. Exit"
 
@@ -93,23 +93,21 @@ check_script() {
 # Determine the script to run based on user choice
 case $choice in
     1) script="${scripts_dir}/test_power.sh" ;;
-    2) script="${scripts_dir}/test_serial.sh" ;;
-    3) script="${scripts_dir}/test_ram.sh" ;;
-    4) script="${scripts_dir}/test_rom.sh" ;;
-    5) script="${scripts_dir}/test_usb_hub.sh" ;;
-    6) script="${scripts_dir}/test_usb_type_a.sh" ;;
+    2) script="${scripts_dir}/test_DP.sh" ;;
+    3) script="${scripts_dir}/test_serial.sh" ;;
+    4) script="${scripts_dir}/test_ram.sh" ;;
+    5) script="${scripts_dir}/test_rom.sh" ;;
+    6) script="${scripts_dir}/test_usb_hub.sh" ;;
     7) script="${scripts_dir}/test_sd_card.sh" ;;
-    # 8) script="${scripts_dir}/test_reset_button.sh" ;;
-    8)  log "Test Factory Reset button not support while test remote" ;
-        log "Please run test.sh in the HSP019_Test folder directly on the device and check the function test." ; exit 0 ;;
-    9) script="${scripts_dir}/test_nvme.sh" ;;
-    10) script="${scripts_dir}/test_rtc.sh" ;;
-    11) script="${scripts_dir}/test_lte.sh" ;;
-    12) script="${scripts_dir}/test_lan7800.sh" ;;
+    8) script="${scripts_dir}/test_nvme.sh" ;;
+    9) script="${scripts_dir}/test_rtc.sh" ;;
+    10) script="${scripts_dir}/test_lte.sh" ;;
+    11) script="${scripts_dir}/test_lan7800.sh" ;;
+    12) script="${scripts_dir}/test_GPIO.sh" ;;
     13) script="${scripts_dir}/test_alarm_IO.sh" ;;
-    14) script="${scripts_dir}/test_DP.sh" ;;
-    15) script="${scripts_dir}/test_GPIO.sh" ;;
-    # 16) script="${scripts_dir}/test_camera.sh" ;;
+    14) script="${scripts_dir}/test_usb_type_a.sh" ;;
+    15)  log "Test Factory Reset button not support while test remote" ;
+        log "Please run test.sh in the HSP019_Test folder directly on the device and check the function test." ; exit 0 ;;
     16)  log "Test camera not support while test remote" ; 
          log "Please run test.sh in the HSP019_Test folder directly on the device and check the function test." ; exit 0 ;;
     17) log "Exiting..."; exit 0 ;;

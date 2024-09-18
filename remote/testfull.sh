@@ -26,23 +26,14 @@ run_test() {
 }
 
 
+# POWER
+run_test "${current_dir}/scripts/test_power.sh"
+
 # DP (Display Port)
 run_test "${current_dir}/scripts/test_DP.sh"
 
-# GPIO
-run_test "${current_dir}/scripts/test_GPIO.sh"
-
-# LAN7800
-run_test "${current_dir}/scripts/test_lan7800.sh"
-
-# LTE
-run_test "${current_dir}/scripts/test_lte.sh"
-
-# NVMe
-run_test "${current_dir}/scripts/test_nvme.sh"
-
-# POWER
-run_test "${current_dir}/scripts/test_power.sh"
+# SERIAL
+run_test "${current_dir}/scripts/test_serial.sh"
 
 # RAM
 run_test "${current_dir}/scripts/test_ram.sh"
@@ -50,23 +41,32 @@ run_test "${current_dir}/scripts/test_ram.sh"
 # ROM
 run_test "${current_dir}/scripts/test_rom.sh"
 
-# RTC
-run_test "${current_dir}/scripts/test_rtc.sh"
+# USB_HUB
+run_test "${current_dir}/scripts/test_usb_hub.sh"
 
 # SD_CARD
 run_test "${current_dir}/scripts/test_sd_card.sh"
 
-# USB_HUB
-run_test "${current_dir}/scripts/test_usb_hub.sh"
+# NVMe
+run_test "${current_dir}/scripts/test_nvme.sh"
 
-# USB_TYPE_A
-run_test "${current_dir}/scripts/test_usb_type_a.sh"
+# RTC
+run_test "${current_dir}/scripts/test_rtc.sh"
 
-# SERIAL
-run_test "${current_dir}/scripts/test_serial.sh"
+# LTE
+run_test "${current_dir}/scripts/test_lte.sh"
+
+# LAN7800
+run_test "${current_dir}/scripts/test_lan7800.sh"
+
+# GPIO
+run_test "${current_dir}/scripts/test_GPIO.sh"
 
 # ALARM_IO
 run_test "${current_dir}/scripts/test_alarm_IO.sh"
+
+# USB_TYPE_A
+run_test "${current_dir}/scripts/test_usb_type_a.sh"
 
 # FACTORY_RESET_BUTTON
 run_test "${current_dir}/scripts/test_reset_button.sh"
