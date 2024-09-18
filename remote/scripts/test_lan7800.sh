@@ -6,10 +6,7 @@ parent_dir="$(dirname "$current_dir")"
 result_dir="$parent_dir/result"
 
 # Create the "result" directory if it doesn't exist
-if ! mkdir -p "$result_dir"; then
-    echo -e "${RED}Error: Failed to create result directory.${NC}" >&2
-    exit 1
-fi
+mkdir -p "$result_dir"
 
 # Define log file location
 log_file="$result_dir/test_lan7800_results.txt"
@@ -55,4 +52,3 @@ else
 fi
 
 exit $result
-
