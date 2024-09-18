@@ -11,6 +11,13 @@ current_dir="$(cd "$(dirname "$0")" && pwd)"
 export log_file="${current_dir}/testfull.log"
 echo -n "" > $log_file
 
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+BOLD='\033[1m'
+NC='\033[0m' # No Color
+
 # Ensure all scripts have executable permissions
 chmod +x ${current_dir}/scripts/*.sh
 
@@ -25,6 +32,10 @@ run_test() {
     echo "" | tee -a "$log_file"
 }
 
+# Display Test Full Function Test Message
+echo -e "${BLUE}${BOLD}============================== TEST FULL FUNCTION TEST ==============================${NC}"
+echo -e "${BLUE}${BOLD}============================== RUNNING ALL TESTS.......==============================${NC}"
+echo 
 
 # POWER
 run_test "${current_dir}/scripts/test_power.sh"
@@ -73,6 +84,9 @@ run_test "${current_dir}/scripts/test_reset_button.sh"
 
 # CAMERA
 run_test "${current_dir}/scripts/test_camera.sh"
+
+# Finish
+echo -e "${BLUE}${BOLD}============================== ALL TESTS COMPLETED...==============================${NC}"
 
 # exit
 exit 0
