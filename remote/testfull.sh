@@ -34,8 +34,8 @@ run_test() {
 
 # Display Test Full Function Test Message
 echo -e "${BLUE}${BOLD}============================== TEST FULL FUNCTION TEST ==============================${NC}"
-echo -e "${BLUE}${BOLD}============================== RUNNING ALL TESTS.......==============================${NC}"
-echo 
+echo -e "${BLUE}${BOLD}==============================    RUNNING ALL TESTS    ==============================${NC}"
+echo
 
 # POWER
 run_test "${current_dir}/scripts/test_power.sh"
@@ -86,7 +86,7 @@ run_test "${current_dir}/scripts/test_reset_button.sh"
 run_test "${current_dir}/scripts/test_camera.sh"
 
 # Finish
-echo -e "${BLUE}${BOLD}============================== ALL TESTS COMPLETED...==============================${NC}"
+echo -e "${BLUE}${BOLD}==============================  ALL TESTS COMPLETED  ==============================${NC}"
 
 # exit
 exit 0
