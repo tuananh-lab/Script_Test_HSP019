@@ -11,16 +11,13 @@ mkdir -p "$result_dir"
 # Log file location
 log_file="$result_dir/test_camera_results.txt"
 
-# Initialize result variable
-result=0
+# Initialize test result variable
 test_result=""
 
 # Set environment variable for GStreamer
 export XDG_RUNTIME_DIR=/run/user/root
 
 # Define status macros
-STATUS_CAMERA_ERROR="camera error"
-STATUS_CAMERA_OK="camera ok"
 STATUS_PASS="PASS"
 STATUS_FAIL="FAIL"
 
@@ -37,14 +34,8 @@ NC='\033[0m' # No Color
 
 # Function to handle signal interruption
 handle_interrupt() {
-    log "Detected interruption (Ctrl+C). Checking camera status..."
-    if [[ "$test_result" == "$STATUS_CAMERA_OK" ]]; then
-        log "Test result: ${GREEN}${BOLD}$STATUS_PASS${NC}"
-        test_result="$STATUS_PASS"
-    else
-        log "Test result: ${RED}${BOLD}$STATUS_FAIL${NC}"
-        test_result="$STATUS_FAIL"
-    fi
+    log "Detected interruption (Ctrl+C)."
+    echo -e "Test result: ${GREEN}${BOLD}$STATUS_PASS${NC}"
     exit 0
 }
 
@@ -58,12 +49,10 @@ view_camera() {
     local height=$3
 
     log "Viewing camera to screen..."
-    if gst-launch-1.0 --gst-debug=2 qtiqmmfsrc camera=$camera_id name=camsrc ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! waylandsink fullscreen=true async=true sync=false; then
-        log "$STATUS_CAMERA_OK: Viewing camera to screen succeeded."
-        test_result="$STATUS_CAMERA_OK"
-    else
-        log "$STATUS_CAMERA_ERROR: Viewing camera to screen failed."
-        test_result="$STATUS_CAMERA_ERROR"
+    gst-launch-1.0 --gst-debug=2 qtiqmmfsrc camera=$camera_id name=camsrc ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! waylandsink fullscreen=true async=true sync=false
+    if [[ $? -ne 0 ]]; then
+        log "Camera view failed."
+        test_result="$STATUS_FAIL"
     fi
 }
 
@@ -75,12 +64,10 @@ record_camera() {
     local output_file=$4
 
     log "Recording Stream: ${width}x${height}..."
-    if gst-launch-1.0 -e qtiqmmfsrc name=camsrc camera=$camera_id ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! queue ! qtic2venc min-quant-i-frames=20 min-quant-p-frames=20 max-quant-i-frames=30 max-quant-p-frames=30 quant-i-frames=20 quant-p-frames=20 target-bitrate=6000000 ! queue ! h264parse ! mp4mux ! queue ! filesink location="$output_file"; then
-        log "$STATUS_CAMERA_OK: Recording camera stream ${width}x${height} succeeded."
-        test_result="$STATUS_CAMERA_OK"
-    else
-        log "$STATUS_CAMERA_ERROR: Recording camera stream ${width}x${height} failed."
-        test_result="$STATUS_CAMERA_ERROR"
+    gst-launch-1.0 -e qtiqmmfsrc name=camsrc camera=$camera_id ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! queue ! qtic2venc min-quant-i-frames=20 min-quant-p-frames=20 max-quant-i-frames=30 max-quant-p-frames=30 quant-i-frames=20 quant-p-frames=20 target-bitrate=6000000 ! queue ! h264parse ! mp4mux ! queue ! filesink location="$output_file"
+    if [[ $? -ne 0 ]]; then
+        log "Camera recording failed."
+        test_result="$STATUS_FAIL"
     fi
 }
 
@@ -95,9 +82,12 @@ test_imx219() {
         case $imx219_choice in
             1) view_camera 0 1920 1080 ;;
             2) record_camera 0 1920 1080 "/data/mux_imx219.mp4" ;;
-            3) return ;;
+            3) break ;;
             *) log "Invalid choice. Please select 1, 2, or 3." ;;
         esac
+        if [[ "$test_result" == "$STATUS_FAIL" ]]; then
+            echo -e "Test result: ${RED}${BOLD}$STATUS_FAIL${NC}"
+        fi
     done
 }
 
@@ -114,9 +104,12 @@ test_imx477() {
             1) view_camera 0 3840 2160 ;;
             2) record_camera 0 3840 2160 "/data/mux_imx477_4k.mp4" ;;
             3) record_camera 0 1920 1080 "/data/mux_imx477_1080p.mp4" ;;
-            4) return ;;
+            4) break ;;
             *) log "Invalid choice. Please select 1, 2, 3, or 4." ;;
         esac
+        if [[ "$test_result" == "$STATUS_FAIL" ]]; then
+            echo -e "Test result: ${RED}${BOLD}$STATUS_FAIL${NC}"
+        fi
     done
 }
 
