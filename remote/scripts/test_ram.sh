@@ -13,6 +13,7 @@ log_file="$result_dir/test_ram_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -32,18 +33,24 @@ log "Testing RAM"
 if ! free_output=$(free -h); then
     log -e "${RED}Error: Failed to run 'free -h' command.${NC}"
     result=1
-    exit $result
+else
+    # Extract the total memory using awk
+    total_memory=$(echo "$free_output" | awk '/^Mem:/ {print $2}')
+    if [ -z "$total_memory" ]; then
+        log -e "${RED}Error: Failed to extract total memory.${NC}"
+        result=1
+    else
+        # Print the total memory
+        log "Total Memory: $total_memory"
+        test_result="PASS"
+    fi
 fi
 
-# Extract the total memory using awk
-total_memory=$(echo "$free_output" | awk '/^Mem:/ {print $2}')
-if [ -z "$total_memory" ]; then
-    log -e "${RED}Error: Failed to extract total memory.${NC}"
-    result=1
-    exit $result
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result:${GREEN}${BOLD}PASS${NC}"
 fi
 
-# Print the total memory
-log "Total Memory: $total_memory"
-echo -e "${GREEN}${BOLD}PASS${NC}"
 exit $result

@@ -16,6 +16,7 @@ log_file="$result_dir/test_nvme_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -39,24 +40,29 @@ log "Testing NVMe"
 # Check if the NVMe device exists
 if ! file_exists "$nvme_device"; then
     log "NVMe device $nvme_device does not exist."
-    echo "NVME_DEVICE_NOT_FOUND"
     echo -e "${RED}${BOLD}FAIL${NC}"
-    result=1
-    exit $result
-fi
-
-# Get detailed information about the NVMe device
-nvme_info=$(ls -l "$nvme_device")
-
-if [ -z "$nvme_info" ]; then
-    log "No information available for $nvme_device."
-    echo "NVME_INFO_ERROR"
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    test_result="FAIL"
     result=1
 else
-    log "NVMe Device Information:"
-    echo "NVME_DEVICE_OK: $nvme_info"
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    # Get detailed information about the NVMe device
+    nvme_info=$(ls -l "$nvme_device")
+
+    if [ -z "$nvme_info" ]; then
+        log "No information available for $nvme_device."
+        test_result="FAIL"
+        result=1
+    else
+        log "NVMe Device Information:"
+        log "$nvme_info"
+        test_result="PASS"
+    fi
+fi
+
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
 fi
 
 exit $result
