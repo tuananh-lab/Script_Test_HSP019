@@ -16,6 +16,7 @@ log_file="$result_dir/test_reset_button_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -40,9 +41,8 @@ log "Testing Reset Button"
 if ! file_exists "$gpio_path"; then
     log "GPIO path $gpio_path does not exist."
     echo "GPIO_PATH_NOT_FOUND"
-    echo -e "${RED}${BOLD}FAIL${NC}"
-    result=1
-    exit $result
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+    exit 1
 fi
 
 # Read initial value (should be 1)
@@ -53,8 +53,7 @@ if [ "$initial_value" -ne 1 ]; then
     log "Initial GPIO value is not 1. Check the button state."
     echo "INITIAL_VALUE_ERROR"
     echo -e "${RED}${BOLD}FAIL${NC}"
-    result=1
-    exit $result
+    exit 1
 fi
 
 # Wait for user to press the reset button
@@ -67,11 +66,11 @@ log "GPIO value after pressing the button: $pressed_value"
 
 if [ "$pressed_value" -ne 0 ]; then
     log "GPIO value after pressing the button is not 0. Check the button functionality."
-    echo -e "${RED}${BOLD}FAIL${NC}"
-    result=1
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
 else
     log "Button functionality is correct. GPIO value after pressing the button is 0."
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
+    test_result="PASS"
 fi
 
 exit $result

@@ -13,6 +13,7 @@ log_file="$result_dir/test_rtc_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define paths
 date_file="/sys/class/rtc/rtc0/date"
@@ -71,8 +72,11 @@ if [ $result -eq 0 ]; then
         result=1
     else
         log "RTC Time: $rtc_time"
-        echo -e "${GREEN}${BOLD}PASS${NC}"
+        test_result="PASS"
     fi
 fi
+
+# Print the final result
+echo -e "Test result: ${!test_result}${GREEN}${BOLD}PASS${NC}"
 
 exit $result

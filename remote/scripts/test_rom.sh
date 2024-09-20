@@ -11,8 +11,9 @@ mkdir -p "$result_dir"
 # Define log file location
 log_file="$result_dir/test_rom_results.txt"
 
-# Initialize result variable
+# Initialize result variables
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -34,12 +35,12 @@ total_flash=$(df -h | awk '$NF == "/" {print $2}')
 # Check if the extraction was successful
 if [ -z "$total_flash" ]; then
     log -e "${RED}Error: Failed to extract total flash size.${NC}"
-    result=1
-    exit $result
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    # Print the total flash size
+    log "Total Flash: ${total_flash}"
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
+    test_result="PASS"
 fi
 
-# Print the total flash size 
-log "Total Flash: ${total_flash}"
-
-echo -e "${GREEN}${BOLD}PASS${NC}"
 exit $result
