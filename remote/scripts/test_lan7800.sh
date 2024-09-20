@@ -13,6 +13,7 @@ log_file="$result_dir/test_lan7800_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -35,12 +36,20 @@ ifconfig_output=$(ifconfig eth0 2>/dev/null)
 if echo "$ifconfig_output" | grep -q "inet "; then
     log "Network interface eth0 has an IP address:"
     log "$ifconfig_output"
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    test_result="PASS"
 else
     log "Network interface eth0 does not have an IP address or is not found."
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    test_result="FAIL"
     result=1
 fi
 
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
+fi
+
 exit $result
+
 

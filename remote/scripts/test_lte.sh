@@ -16,6 +16,7 @@ log_file="$result_dir/test_lte_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Colors
 RED='\033[0;31m'
@@ -28,11 +29,6 @@ log() {
     echo "$1" | tee -a "$log_file"
 }
 
-# Define function to check if a file exists
-file_exists() {
-    [ -e "$1" ] 
-}
-
 # Start testing
 log "Testing LTE 4G"
 
@@ -42,11 +38,18 @@ lsusb_output=$(lsusb)
 # Check for the LTE 4G device in the output
 if echo "$lsusb_output" | grep -q "$usb_id"; then
     log "LTE 4G DEVICE FOUND:"
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    test_result="PASS"
 else
-    echo "LTE_4G_DEVICE_NOT_FOUND"
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    log "LTE 4G DEVICE NOT FOUND"
+    test_result="FAIL"
     result=1
+fi
+
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
 fi
 
 exit $result

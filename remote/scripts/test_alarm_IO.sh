@@ -60,11 +60,18 @@ if [ $result -eq 0 ]; then
 
     log "Alarm IO test completed. Listen for relay clicks."
 
-    # Print PASS message with color
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    # Set result to PASS
+    test_result="PASS"
 else
-    # Print FAIL message with color
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    # Set result to FAIL
+    test_result="FAIL"
+fi
+
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
 fi
 
 exit $result
