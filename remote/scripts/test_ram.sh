@@ -50,7 +50,7 @@ fi
 if [ "$test_result" == "FAIL" ]; then
     echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
 else
-    echo -e "Test result:${GREEN}${BOLD}PASS${NC}"
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
 fi
 
 exit $result
