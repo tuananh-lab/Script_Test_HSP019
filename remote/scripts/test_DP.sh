@@ -30,9 +30,18 @@ log() {
 file_exists() {
     [ -e "$1" ]
 }
+# Set result to PASS
+test_result="PASS"
+
 # Start testing
 log "Testing DP(Display Port)..."
 log "Please plug the type-c to hdmi adapter into the monitor in both directions"
 log "The results display the image on the screen"
-echo -e "${GREEN}${BOLD}PASS${NC}"
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
+fi
+
 exit $result
