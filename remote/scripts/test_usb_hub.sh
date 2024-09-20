@@ -11,8 +11,9 @@ mkdir -p "$result_dir"
 # Define log file location
 log_file="$result_dir/test_usb_hub_results.txt"
 
-# Initialize result variable
+# Initialize result variables
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -35,13 +36,13 @@ usb_devices=$(lsusb | grep "Microchip Technology")
 if [ -z "$usb_devices" ]; then
     log "No Microchip Technology devices found."
     echo "NO_MICROCHIP_DEVICES_FOUND"
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
     result=1
 else
     log "Microchip Technology Devices Found:"
     echo "$usb_devices"
-    echo -e "${GREEN}${BOLD}PASS${NC}"
-
+    test_result="PASS"
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
 fi
 
 exit $result

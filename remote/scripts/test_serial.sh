@@ -14,21 +14,18 @@ serial_file="/etc/adb_devid"
 # Define log file location
 log_file="$result_dir/test_serial_results.txt"
 
-# Initialize result variable
+# Initialize result variables
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
     echo "$1" | tee -a "$log_file"
 }
 
-# Check file exist
+# Check file existence
 file_exists() {
-    if [ -f "$1" ]; then
-        return 0  # File exists
-    else
-        return 1  # File does not exist
-    fi
+    [ -f "$1" ]
 }
 
 # Colors
@@ -44,22 +41,23 @@ log "Testing Serial Port"
 if ! file_exists "$serial_file"; then
     log "Serial file $serial_file does not exist."
     echo "SERIAL_FILE_NOT_FOUND"
-    echo -e "${RED}${BOLD}FAIL${NC}"
-    result=1
-    exit $result
-fi
-
-# Read serial number from the file
-serial_number=$(cat "$serial_file")
-
-# Check if the serial number is empty
-if [ -z "$serial_number" ]; then
-    log "Serial number is empty."
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
     result=1
 else
-    log "Serial Number: $serial_number"
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    # Read serial number from the file
+    serial_number=$(cat "$serial_file")
+
+    # Check if the serial number is empty
+    if [ -z "$serial_number" ]; then
+        log "Serial number is empty."
+        echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+        result=1
+    else
+        test_result="PASS"
+        # In addition to showing PASS, we also print the serial_number in a format that testfull.sh can easily parse
+        echo -e "serial_number: $serial_number"  # This line will be captured by testfull.sh
+        echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
+    fi
 fi
 
 exit $result

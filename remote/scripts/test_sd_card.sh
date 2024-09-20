@@ -16,6 +16,7 @@ log_file="$result_dir/test_sd_card_results.txt"
 
 # Initialize result variable
 result=0
+test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
@@ -40,7 +41,7 @@ log "Testing SD Card"
 if ! file_exists "$sd_device"; then
     log "SD device $sd_device does not exist."
     echo "SD_DEVICE_NOT_FOUND"
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
     result=1
 else
     # Get detailed information about the SD device
@@ -49,12 +50,13 @@ else
     if [ -z "$sd_info" ]; then
         log "No information available for $sd_device."
         echo "SD_DEVICE_INFO_ERROR"
-        echo -e "${RED}${BOLD}FAIL${NC}"
+        echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
         result=1
     else
         log "SD Device Information:"
         log "$sd_info"
-        echo -e "${GREEN}${BOLD}PASS${NC}"
+        test_result="PASS"
+        echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
     fi
 fi
 
