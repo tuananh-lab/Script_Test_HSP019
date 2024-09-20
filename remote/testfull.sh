@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# get dir
+# Get current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 
-# add libs
-. ${current_dir}/../common/common.sh
-. ${current_dir}/../error/error.sh
+# Add common and error handling libraries
+source "${current_dir}/../common/common.sh"
+source "${current_dir}/../error/error.sh"
 
-# Set log file location
+# Set log file and summary file locations
 export log_file="${current_dir}/testfull.log"
-echo -n "" > $log_file
+summary_file="${current_dir}/test_summary.txt"
+echo -n "" > "$log_file"
+echo -n "" > "$summary_file"
 
 # Colors
 RED='\033[0;31m'
@@ -19,74 +21,85 @@ BOLD='\033[1m'
 NC='\033[0m' # No Color
 
 # Ensure all scripts have executable permissions
-chmod +x ${current_dir}/scripts/*.sh
-
-# Ensure log file has write permissions
-chmod +w "$log_file"
+chmod +x "${current_dir}/scripts/"*.sh
 
 # Function to run each test and add a line separator
 run_test() {
     script_path="$1"
-    echo "Running test: ${script_path}" | tee -a "$log_file"
-    ${script_path} 2>&1 | tee -a "$log_file"
+    test_name=$(basename "$script_path" .sh)
+    
+    # Display the name of the test being run
+    echo -e "${BLUE}${BOLD}Running test: ${test_name}${NC}" | tee -a "$log_file"
+    
+    # Run the test script and capture the output live
+    "${script_path}" 2>&1 | tee -a "$log_file"
+    
+    # Check the result from the log file by looking for "Test result: PASS" or "Test result: FAIL"
+    test_result=$(grep -oP "(?<=Test result: ).*" "$log_file" | tail -1)
+    
+    # If the test is test_serial.sh, get the serial number from the output
+    serial_number=""
+    if [[ "$test_name" == "test_serial" ]]; then
+        serial_number=$(grep -oP "(?<=serial_number: ).*" "$log_file" | tail -1)
+    fi
+
+    # If no result is found, set to UNKNOWN
+    if [[ -z "$test_result" ]]; then
+        test_result="UNKNOWN"
+    fi
+    
+    # Append the test result to the summary file with serial_number if present
+    if [[ -n "$serial_number" ]]; then
+        echo "$test_name: $test_result | serial_number: $serial_number" >> "$summary_file"
+    else
+        echo "$test_name: $test_result" >> "$summary_file"
+    fi
+    
     echo "" | tee -a "$log_file"
 }
 
-# Display Test Full Function Test Message
+# Display test header
 echo -e "${BLUE}${BOLD}============================== TEST FULL FUNCTION TEST ==============================${NC}"
 echo -e "${BLUE}${BOLD}==============================    RUNNING ALL TESTS    ==============================${NC}"
 echo
 
-# POWER
-run_test "${current_dir}/scripts/test_power.sh"
+# List of test scripts to run
+test_scripts=(
+    "test_power.sh"
+    "test_DP.sh"
+    "test_serial.sh"
+    "test_ram.sh"
+    "test_rom.sh"
+    "test_usb_hub.sh"
+    "test_sd_card.sh"
+    "test_nvme.sh"
+    "test_rtc.sh"
+    "test_lte.sh"
+    "test_lan7800.sh"
+    "test_GPIO.sh"
+    "test_alarm_IO.sh"
+    "test_usb_type_a.sh"
+    "test_reset_button.sh"
+    "test_camera.sh"
+)
 
-# DP (Display Port)
-run_test "${current_dir}/scripts/test_DP.sh"
+# Run all test scripts
+for test_script in "${test_scripts[@]}"; do
+    run_test "${current_dir}/scripts/${test_script}"
+done
 
-# SERIAL
-run_test "${current_dir}/scripts/test_serial.sh"
-
-# RAM
-run_test "${current_dir}/scripts/test_ram.sh"
-
-# ROM
-run_test "${current_dir}/scripts/test_rom.sh"
-
-# USB_HUB
-run_test "${current_dir}/scripts/test_usb_hub.sh"
-
-# SD_CARD
-run_test "${current_dir}/scripts/test_sd_card.sh"
-
-# NVMe
-run_test "${current_dir}/scripts/test_nvme.sh"
-
-# RTC
-run_test "${current_dir}/scripts/test_rtc.sh"
-
-# LTE
-run_test "${current_dir}/scripts/test_lte.sh"
-
-# LAN7800
-run_test "${current_dir}/scripts/test_lan7800.sh"
-
-# GPIO
-run_test "${current_dir}/scripts/test_GPIO.sh"
-
-# ALARM_IO
-run_test "${current_dir}/scripts/test_alarm_IO.sh"
-
-# USB_TYPE_A
-run_test "${current_dir}/scripts/test_usb_type_a.sh"
-
-# FACTORY_RESET_BUTTON
-run_test "${current_dir}/scripts/test_reset_button.sh"
-
-# CAMERA
-run_test "${current_dir}/scripts/test_camera.sh"
-
-# Finish
+# Display the test results summary
+echo -e "${BLUE}${BOLD}============================== TEST RESULTS SUMMARY ==============================${NC}"
+while IFS= read -r line; do
+    if [[ $line == *"PASS"* ]]; then
+        echo -e "${GREEN}${line}${NC}"
+    elif [[ $line == *"FAIL"* ]]; then
+        echo -e "${RED}${line}${NC}"
+    else
+        echo -e "${line}"
+    fi
+done < "$summary_file"
 echo -e "${BLUE}${BOLD}==============================  ALL TESTS COMPLETED  ==============================${NC}"
 
-# exit
+# Exit with status
 exit 0
