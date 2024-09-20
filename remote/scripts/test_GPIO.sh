@@ -11,11 +11,11 @@ mkdir -p "$result_dir"
 # Define log file location
 log_file="$result_dir/test_GPIO_results.txt"
 
-# Check for root privileges
-if [ "$EUID" -ne 0 ]; then
-  echo "Please run the script as root."
-  exit 1
-fi
+# # Check for root privileges
+# if [ "$EUID" -ne 0 ]; then
+#   echo "Please run the script as root."
+#   exit 1
+# fi
 
 # Initialize result variable
 result=0
@@ -38,6 +38,10 @@ export_gpio() {
     local gpio_pin="$1"
     if [ ! -e "/sys/class/gpio/gpio${gpio_pin}" ]; then
         echo "$gpio_pin" > /sys/class/gpio/export
+        if [ $? -ne 0 ]; then
+            log "Failed to export GPIO pin $gpio_pin."
+            result=1
+        fi
     fi
 }
 
@@ -45,7 +49,15 @@ export_gpio() {
 configure_gpio() {
     local gpio_pin="$1"
     echo "out" > "/sys/class/gpio/gpio${gpio_pin}/direction"
+    if [ $? -ne 0 ]; then
+        log "Failed to set direction for GPIO pin $gpio_pin."
+        result=1
+    fi
     echo "1" > "/sys/class/gpio/gpio${gpio_pin}/value"
+    if [ $? -ne 0 ]; then
+        log "Failed to set value for GPIO pin $gpio_pin."
+        result=1
+    fi
 }
 
 # Start testing
@@ -56,22 +68,28 @@ for gpio_pin in "${gpio_pins[@]}"; do
     export_gpio "$gpio_pin"
     if [ ! -e "/sys/class/gpio/gpio${gpio_pin}/value" ]; then
         log "GPIO pin $gpio_pin export failed or does not exist."
-        echo -e "${RED}${BOLD}FAIL${NC}"
         result=1
     fi
 done
 
-# Configure GPIO pins
+# Configure GPIO pins if no export failures
 if [ $result -eq 0 ]; then
     for gpio_pin in "${gpio_pins[@]}"; do
         configure_gpio "$gpio_pin"
     done
 
     log "GPIO test completed. Please check the voltage on pins 2, 3, 4, 5 of J1101 for 1.8V."
-    echo -e "${GREEN}${BOLD}PASS${NC}"
+    test_result="PASS"
 else
     log "GPIO test failed."
-    echo -e "${RED}${BOLD}FAIL${NC}"
+    test_result="FAIL"
+fi
+
+# Print the result with color and bold
+if [ "$test_result" == "FAIL" ]; then
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+else
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
 fi
 
 exit $result
