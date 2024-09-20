@@ -13,6 +13,7 @@ log_file="$result_dir/test_camera_results.txt"
 
 # Initialize result variable
 result=0
+test_result=""
 
 # Set environment variable for GStreamer
 export XDG_RUNTIME_DIR=/run/user/root
@@ -20,6 +21,8 @@ export XDG_RUNTIME_DIR=/run/user/root
 # Define status macros
 STATUS_CAMERA_ERROR="camera error"
 STATUS_CAMERA_OK="camera ok"
+STATUS_PASS="PASS"
+STATUS_FAIL="FAIL"
 
 # Define logging function
 log() {
@@ -32,6 +35,22 @@ GREEN='\033[0;32m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
+# Function to handle signal interruption
+handle_interrupt() {
+    log "Detected interruption (Ctrl+C). Checking camera status..."
+    if [[ "$test_result" == "$STATUS_CAMERA_OK" ]]; then
+        log "Test result: ${GREEN}${BOLD}$STATUS_PASS${NC}"
+        test_result="$STATUS_PASS"
+    else
+        log "Test result: ${RED}${BOLD}$STATUS_FAIL${NC}"
+        test_result="$STATUS_FAIL"
+    fi
+    exit 0
+}
+
+# Trap the Ctrl+C signal
+trap handle_interrupt SIGINT
+
 # Function to view the camera feed
 view_camera() {
     local camera_id=$1
@@ -41,8 +60,10 @@ view_camera() {
     log "Viewing camera to screen..."
     if gst-launch-1.0 --gst-debug=2 qtiqmmfsrc camera=$camera_id name=camsrc ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! waylandsink fullscreen=true async=true sync=false; then
         log "$STATUS_CAMERA_OK: Viewing camera to screen succeeded."
+        test_result="$STATUS_CAMERA_OK"
     else
         log "$STATUS_CAMERA_ERROR: Viewing camera to screen failed."
+        test_result="$STATUS_CAMERA_ERROR"
     fi
 }
 
@@ -56,8 +77,10 @@ record_camera() {
     log "Recording Stream: ${width}x${height}..."
     if gst-launch-1.0 -e qtiqmmfsrc name=camsrc camera=$camera_id ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! queue ! qtic2venc min-quant-i-frames=20 min-quant-p-frames=20 max-quant-i-frames=30 max-quant-p-frames=30 quant-i-frames=20 quant-p-frames=20 target-bitrate=6000000 ! queue ! h264parse ! mp4mux ! queue ! filesink location="$output_file"; then
         log "$STATUS_CAMERA_OK: Recording camera stream ${width}x${height} succeeded."
+        test_result="$STATUS_CAMERA_OK"
     else
         log "$STATUS_CAMERA_ERROR: Recording camera stream ${width}x${height} failed."
+        test_result="$STATUS_CAMERA_ERROR"
     fi
 }
 
