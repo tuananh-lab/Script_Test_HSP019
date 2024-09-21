@@ -1,0 +1,121 @@
+Testing LAN7800
+Network interface eth0 not found or has no data.
+Testing LAN7800
+Network interface eth0 not found or has no data.
+Testing LAN7800
+Network connectivity OK.
+Network interface eth0 not found or has no data.
+Testing LAN7800
+Network connectivity OK.
+Network interface eth0 not found or has no data.
+Testing LAN7800
+Network connectivity OK.
+Network interface eth0 not found or has no data.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Failed to run 'ifconfig' command.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.

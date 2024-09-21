@@ -1,0 +1,793 @@
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Camera test result: FAIL
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Camera test result: FAIL
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Recording Stream: 1920x1080...
+camera error: Recording camera stream 1920x1080 failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+camera error: Viewing camera to screen failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Test result: \033[0;31m\033[1mFAIL\033[0m
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+Camera view failed.
+Test result: \033[0;31m\033[1mFAIL\033[0m
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Viewing camera to screen...
+Camera view failed.
+Testing IMX219 camera
+1. View camera
+2. Record camera
+3. Back
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Exiting...

@@ -1,0 +1,201 @@
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Alarm IO test done
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Alarm IO test done
+Testing Alarm IO
+Exporting GPIO pin gpio457
+Failed to set direction for gpio457
+GPIO pin gpio457 does not exist.
+Exporting GPIO pin gpio459
+Failed to set direction for gpio459
+GPIO pin gpio459 does not exist.
+Alarm IO test done
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Alarm IO test done
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Test result: FAIL
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Test result: FAIL
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Test result: FAIL
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Test result: FAIL
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
