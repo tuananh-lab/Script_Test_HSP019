@@ -47,7 +47,7 @@ Test result: [0;32m[1mPASS[0m
 [0;34m[1mRunning test: test_rtc[0m
 Testing RTC
 RTC Date: 2024-09-27
-RTC Time: 02:46:35
+RTC Time: 07:27:13
 Test result: [0;32m[1mPASS[0m
 
 [0;34m[1mRunning test: test_lte[0m
@@ -78,19 +78,35 @@ GPIO test failed.
 Test result: [0;31m[1mFAIL[0m
 
 [0;34m[1mRunning test: test_alarm_IO[0m
+tee: '': No such file or directory
 Testing Alarm IO
+tee: '': No such file or directory
 GPIO pin gpio457 does not exist.
+tee: '': No such file or directory
 GPIO pin gpio459 does not exist.
 Test result: [0;31m[1mFAIL[0m
 
 [0;34m[1mRunning test: test_usb_type_a[0m
-Select a USB port to test:
-1. Test Port 1
-2. Test Port 2
-3. Test Port 3
-4. Test Port 4
-5. Exit
-Enter your choice (1-5): Exiting the program.
+Starting USB Type-A port testing...
+Testing all ports for USB 2.0...
+Please insert a USB device into Port 1 for USB 2.0 testing and press Enter to continue.
+Press Enter when ready to test Port 1 (USB 2.0)...Test result for Port 1 (USB 2.0): [0;31m[1mFAIL[0m
+Please insert a USB device into Port 2 for USB 2.0 testing and press Enter to continue.
+Press Enter when ready to test Port 2 (USB 2.0)...Test result for Port 2 (USB 2.0): [0;31m[1mFAIL[0m
+Please insert a USB device into Port 3 for USB 2.0 testing and press Enter to continue.
+Press Enter when ready to test Port 3 (USB 2.0)...Test result for Port 3 (USB 2.0): [0;31m[1mFAIL[0m
+Please insert a USB device into Port 4 for USB 2.0 testing and press Enter to continue.
+Press Enter when ready to test Port 4 (USB 2.0)...Test result for Port 4 (USB 2.0): [0;31m[1mFAIL[0m
+Testing all ports for USB 3.0...
+Please insert a USB device into Port 1 for USB 3.0 testing and press Enter to continue.
+Press Enter when ready to test Port 1 (USB 3.0)...Test result for Port 1 (USB 3.0): [0;31m[1mFAIL[0m
+Please insert a USB device into Port 2 for USB 3.0 testing and press Enter to continue.
+Press Enter when ready to test Port 2 (USB 3.0)...Test result for Port 2 (USB 3.0): [0;31m[1mFAIL[0m
+Please insert a USB device into Port 3 for USB 3.0 testing and press Enter to continue.
+Press Enter when ready to test Port 3 (USB 3.0)...Test result for Port 3 (USB 3.0): [0;31m[1mFAIL[0m
+Please insert a USB device into Port 4 for USB 3.0 testing and press Enter to continue.
+Press Enter when ready to test Port 4 (USB 3.0)...Test result for Port 4 (USB 3.0): [0;31m[1mFAIL[0m
+USB Type-A port testing completed.
 
 [0;34m[1mRunning test: test_reset_button[0m
 Testing Reset Button
@@ -99,6 +115,26 @@ GPIO_PATH_NOT_FOUND
 Test result: [0;31m[1mFAIL[0m
 
 [0;34m[1mRunning test: test_camera[0m
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Enter your choice (1-3): Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Enter your choice (1-3): Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Enter your choice (1-3): Invalid choice. Please select 1, 2, or 3.
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Enter your choice (1-3): Invalid choice. Please select 1, 2, or 3.
 Select camera module to test:
 1. IMX219
 2. IMX477
