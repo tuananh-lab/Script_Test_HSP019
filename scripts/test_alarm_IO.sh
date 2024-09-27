@@ -19,7 +19,7 @@ gpio_pins=("gpio457" "gpio459")
 
 # Define logging function
 log() {
-    echo "$1" | tee -a "$log_file"
+    echo "$1"
 }
 
 # Define function to test GPIO value

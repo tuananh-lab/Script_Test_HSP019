@@ -1,0 +1,25 @@
+Port 1 (USB 2.0): FAIL
+Port 2 (USB 2.0): FAIL
+Port 3 (USB 2.0): FAIL
+Port 4 (USB 2.0): FAIL
+Port 1 (USB 3.0): FAIL
+Port 2 (USB 3.0): FAIL
+Port 3 (USB 3.0): FAIL
+Port 4 (USB 3.0): FAIL
+Final Test result: FAIL
+Port 1 (USB 2.0): FAIL
+Port 2 (USB 2.0): FAIL
+Port 3 (USB 2.0): FAIL
+Port 4 (USB 2.0): FAIL
+Port 1 (USB 3.0): FAIL
+Port 2 (USB 3.0): FAIL
+Port 3 (USB 3.0): FAIL
+Port 4 (USB 3.0): FAIL
+Port 1 (USB 2.0): FAIL
+Port 2 (USB 2.0): FAIL
+Port 3 (USB 2.0): FAIL
+Port 4 (USB 2.0): FAIL
+Port 1 (USB 3.0): FAIL
+Port 2 (USB 3.0): FAIL
+Port 3 (USB 3.0): FAIL
+Port 4 (USB 3.0): FAIL

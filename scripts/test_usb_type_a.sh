@@ -3,20 +3,21 @@
 # Set current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 parent_dir="$(dirname "$current_dir")"
-# result_dir="$parent_dir/result"
+result_dir="$parent_dir/result"
 
-# # Create the "result" directory if it doesn't exist
-# mkdir -p "$result_dir"
+# Create the "result" directory if it doesn't exist
+mkdir -p "$result_dir"
 
-# # Define log file location
-# log_file="$result_dir/test_usb_type_a_results.txt"
+# Define log file location
+log_file="$result_dir/test_usb_type_a_results.txt"
 
 # Initialize result variables
 result=0
+test_result="PASS"  # Default to PASS, will change to FAIL if any test fails
 
 # Define logging function
 log() {
-    echo "$1"
+    echo "$1" | tee -a "$log_file"
 }
 
 # Colors
@@ -45,9 +46,12 @@ check_usb_info() {
 
     if echo "$usb_info" | grep -qE "Driver=usb-storage, $pattern"; then
         echo -e "Test result for Port $port_num (USB $usb_type): ${GREEN}${BOLD}PASS${NC}"
+        log "Port $port_num (USB $usb_type): PASS"
         return 0  # Success
     else
         echo -e "Test result for Port $port_num (USB $usb_type): ${RED}${BOLD}FAIL${NC}"
+        log "Port $port_num (USB $usb_type): FAIL"
+        test_result="FAIL"  # If any test fails, set test_result to FAIL
         return 1  # Fail
     fi
 }
@@ -78,6 +82,11 @@ for port in {1..4}; do
     test_port "$port" "3.0"
 done
 
-echo "USB Type-A port testing completed."
+# Final test result
+if [ "$test_result" == "PASS" ]; then
+    echo -e "Test result: ${GREEN}${BOLD}PASS${NC}"
+else
+    echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
+fi
 
 exit $result
