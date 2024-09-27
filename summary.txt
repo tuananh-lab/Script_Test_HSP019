@@ -11,6 +11,3 @@ test_lte: [0;31m[1mFAIL[0m
 test_lan7800: [0;31m[1mFAIL[0m
 test_GPIO: [0;31m[1mFAIL[0m
 test_alarm_IO: [0;31m[1mFAIL[0m
-test_usb_type_a: [0;31m[1mFAIL[0m
-test_reset_button: [0;31m[1mFAIL[0m
-test_camera: [0;31m[1mFAIL[0m

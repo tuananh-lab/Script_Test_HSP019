@@ -47,7 +47,7 @@ Test result: [0;32m[1mPASS[0m
 [0;34m[1mRunning test: test_rtc[0m
 Testing RTC
 RTC Date: 2024-09-27
-RTC Time: 08:33:57
+RTC Time: 09:25:22
 Test result: [0;32m[1mPASS[0m
 
 [0;34m[1mRunning test: test_lte[0m
@@ -78,56 +78,37 @@ GPIO test failed.
 Test result: [0;31m[1mFAIL[0m
 
 [0;34m[1mRunning test: test_alarm_IO[0m
+Running test: test_alarm_IO
 Testing Alarm IO
-GPIO pin gpio457 does not exist.
-GPIO pin gpio459 does not exist.
+Exporting GPIO 457
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 23: /sys/class/gpio/export: Permission denied
+/sys/class/gpio/export: Permission denied
+Setting GPIO 457 direction to out
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 36: /sys/class/gpio/gpio457/direction: No such file or directory
+/sys/class/gpio/gpio457/direction: No such file or directory
+Exporting GPIO 459
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 23: /sys/class/gpio/export: Permission denied
+/sys/class/gpio/export: Permission denied
+Setting GPIO 459 direction to out
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 36: /sys/class/gpio/gpio459/direction: No such file or directory
+/sys/class/gpio/gpio459/direction: No such file or directory
+Setting 457 to 1
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 47: /sys/class/gpio/gpio457/value: No such file or directory
+/sys/class/gpio/gpio457/value: No such file or directory
+Setting 457 to 0
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 47: /sys/class/gpio/gpio457/value: No such file or directory
+/sys/class/gpio/gpio457/value: No such file or directory
+Setting 459 to 1
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 47: /sys/class/gpio/gpio459/value: No such file or directory
+/sys/class/gpio/gpio459/value: No such file or directory
+Setting 459 to 0
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_alarm_IO.sh: line 47: /sys/class/gpio/gpio459/value: No such file or directory
+/sys/class/gpio/gpio459/value: No such file or directory
+Alarm IO test completed. Listen for relay clicks.
 Test result: [0;31m[1mFAIL[0m
 
 [0;34m[1mRunning test: test_usb_type_a[0m
 Starting USB Type-A port testing...
 Testing all ports for USB 2.0...
 Please insert a USB device into Port 1 for USB 2.0 testing and press Enter to continue.
-Press Enter when ready to test Port 1 (USB 2.0)...Test result for Port 1 (USB 2.0): [0;31m[1mFAIL[0m
-Port 1 (USB 2.0): FAIL
-Please insert a USB device into Port 2 for USB 2.0 testing and press Enter to continue.
-Press Enter when ready to test Port 2 (USB 2.0)...Test result for Port 2 (USB 2.0): [0;31m[1mFAIL[0m
-Port 2 (USB 2.0): FAIL
-Please insert a USB device into Port 3 for USB 2.0 testing and press Enter to continue.
-Press Enter when ready to test Port 3 (USB 2.0)...Test result for Port 3 (USB 2.0): [0;31m[1mFAIL[0m
-Port 3 (USB 2.0): FAIL
-Please insert a USB device into Port 4 for USB 2.0 testing and press Enter to continue.
-Press Enter when ready to test Port 4 (USB 2.0)...Test result for Port 4 (USB 2.0): [0;31m[1mFAIL[0m
-Port 4 (USB 2.0): FAIL
-Testing all ports for USB 3.0...
-Please insert a USB device into Port 1 for USB 3.0 testing and press Enter to continue.
-Press Enter when ready to test Port 1 (USB 3.0)...Test result for Port 1 (USB 3.0): [0;31m[1mFAIL[0m
-Port 1 (USB 3.0): FAIL
-Please insert a USB device into Port 2 for USB 3.0 testing and press Enter to continue.
-Press Enter when ready to test Port 2 (USB 3.0)...Test result for Port 2 (USB 3.0): [0;31m[1mFAIL[0m
-Port 2 (USB 3.0): FAIL
-Please insert a USB device into Port 3 for USB 3.0 testing and press Enter to continue.
-Press Enter when ready to test Port 3 (USB 3.0)...Test result for Port 3 (USB 3.0): [0;31m[1mFAIL[0m
-Port 3 (USB 3.0): FAIL
-Please insert a USB device into Port 4 for USB 3.0 testing and press Enter to continue.
-Press Enter when ready to test Port 4 (USB 3.0)...Test result for Port 4 (USB 3.0): [0;31m[1mFAIL[0m
-Port 4 (USB 3.0): FAIL
-Test result: [0;31m[1mFAIL[0m
-
-[0;34m[1mRunning test: test_reset_button[0m
-Testing Reset Button
-GPIO path /sys/class/gpio/gpio360/value does not exist.
-GPIO_PATH_NOT_FOUND
-Test result: [0;31m[1mFAIL[0m
-
-[0;34m[1mRunning test: test_camera[0m
-Select camera module to test:
-1. IMX219
-2. IMX477
-3. Exit
-Enter your choice (1-3): Invalid choice. Please select 1, 2, or 3.
-Select camera module to test:
-1. IMX219
-2. IMX477
-3. Exit
-Enter your choice (1-3): Exiting...
-
+Press Enter when ready to test Port 1 (USB 2.0)...
