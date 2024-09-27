@@ -4,12 +4,11 @@
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 
 # Add common and error handling libraries
-source "${current_dir}/../common/common.sh"
-source "${current_dir}/../error/error.sh"
+source "${current_dir}/scripts/common.sh"
+source "${current_dir}/scripts/error.sh"
 
 # Set log file and summary file locations
-export log_file="${current_dir}/testfull.log"
-summary_file="${current_dir}/test_summary.txt"
+summary_file="${current_dir}/summary.txt"
 echo -n "" >"$log_file"
 echo -n "" >"$summary_file"
 

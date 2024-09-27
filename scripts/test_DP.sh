@@ -4,13 +4,13 @@
 # Set current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 parent_dir="$(dirname "$current_dir")"
-result_dir="$parent_dir/result"
+# result_dir="$parent_dir/result"
 
-# Create the "result" directory if it doesn't exist
-mkdir -p "$result_dir"
+# # Create the "result" directory if it doesn't exist
+# mkdir -p "$result_dir"
 
-#Define log file location
-log_file="$result_dir/test_DP_results.txt"
+# #Define log file location
+# log_file="$result_dir/test_DP_results.txt"
 
 # Initialize result variable
 result=0
@@ -23,7 +23,7 @@ NC='\033[0m' # No Color
 
 # Define logging function
 log() {
-    echo "$1" | tee -a "$log_file"
+    echo "$1"
 }
 
 # Define function to check if a file exists

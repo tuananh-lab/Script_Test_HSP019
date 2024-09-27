@@ -3,16 +3,16 @@
 # Set current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 parent_dir="$(dirname "$current_dir")"
-result_dir="$parent_dir/result"
+# result_dir="$parent_dir/result"
 
-# Create the "result" directory if it doesn't exist
-mkdir -p "$result_dir"
+# # Create the "result" directory if it doesn't exist
+# mkdir -p "$result_dir"
 
 # Define SD card device
 sd_device="/dev/mmcblk1p1"
 
-# Define log file location
-log_file="$result_dir/test_sd_card_results.txt"
+# # Define log file location
+# log_file="$result_dir/test_sd_card_results.txt"
 
 # Initialize result variable
 result=0
@@ -20,7 +20,7 @@ test_result="FAIL"  # Default to FAIL
 
 # Define logging function
 log() {
-    echo "$1" | tee -a "$log_file"
+    echo "$1"
 }
 
 # Define function to check if a file exists

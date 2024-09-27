@@ -1,0 +1,107 @@
+[0;34m[1mRunning test: test_power[0m
+Testing power
+Please supply power to box and check the console log
+Account to login is root, password is oelinux123
+Test result: [0;32m[1mPASS[0m
+
+[0;34m[1mRunning test: test_DP[0m
+Testing DP(Display Port)...
+Please plug the type-c to hdmi adapter into the monitor in both directions
+The results display the image on the screen
+Test result: [0;32m[1mPASS[0m
+
+[0;34m[1mRunning test: test_serial[0m
+Testing Serial Port
+Serial file /etc/adb_devid does not exist.
+SERIAL_FILE_NOT_FOUND
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_ram[0m
+Testing RAM
+Total Memory: 15Gi
+Test result: [0;32m[1mPASS[0m
+
+[0;34m[1mRunning test: test_rom[0m
+Testing ROM
+Total Flash: 76G
+Test result: [0;32m[1mPASS[0m
+
+[0;34m[1mRunning test: test_usb_hub[0m
+Testing USB Hub
+No Microchip Technology devices found.
+NO_MICROCHIP_DEVICES_FOUND
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_sd_card[0m
+Testing SD Card
+SD device /dev/mmcblk1p1 does not exist.
+SD_DEVICE_NOT_FOUND
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_nvme[0m
+Testing NVMe
+NVMe Device Information:
+brw-rw---- 1 root disk 259, 0 Thg 9  27 07:03 /dev/nvme0n1
+Test result: [0;32m[1mPASS[0m
+
+[0;34m[1mRunning test: test_rtc[0m
+Testing RTC
+RTC Date: 2024-09-27
+RTC Time: 02:46:35
+Test result: [0;32m[1mPASS[0m
+
+[0;34m[1mRunning test: test_lte[0m
+Testing LTE 4G
+LTE 4G DEVICE NOT FOUND
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_lan7800[0m
+Testing LAN7800
+Network interface eth0 does not have an IP address or is not found.
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_GPIO[0m
+Testing GPIO
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_GPIO.sh: line 40: /sys/class/gpio/export: Permission denied
+Failed to export GPIO pin 372.
+GPIO pin 372 export failed or does not exist.
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_GPIO.sh: line 40: /sys/class/gpio/export: Permission denied
+Failed to export GPIO pin 373.
+GPIO pin 373 export failed or does not exist.
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_GPIO.sh: line 40: /sys/class/gpio/export: Permission denied
+Failed to export GPIO pin 374.
+GPIO pin 374 export failed or does not exist.
+/home/tuananh/HSP-019/HSP019_Test/scripts/test_GPIO.sh: line 40: /sys/class/gpio/export: Permission denied
+Failed to export GPIO pin 375.
+GPIO pin 375 export failed or does not exist.
+GPIO test failed.
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_alarm_IO[0m
+Testing Alarm IO
+GPIO pin gpio457 does not exist.
+GPIO pin gpio459 does not exist.
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_usb_type_a[0m
+Select a USB port to test:
+1. Test Port 1
+2. Test Port 2
+3. Test Port 3
+4. Test Port 4
+5. Exit
+Enter your choice (1-5): Exiting the program.
+
+[0;34m[1mRunning test: test_reset_button[0m
+Testing Reset Button
+GPIO path /sys/class/gpio/gpio360/value does not exist.
+GPIO_PATH_NOT_FOUND
+Test result: [0;31m[1mFAIL[0m
+
+[0;34m[1mRunning test: test_camera[0m
+Select camera module to test:
+1. IMX219
+2. IMX477
+3. Exit
+Enter your choice (1-3): Exiting...
+

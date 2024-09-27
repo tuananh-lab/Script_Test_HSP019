@@ -3,13 +3,13 @@
 # Set current directory
 current_dir="$(cd "$(dirname "$0")" && pwd)"
 parent_dir="$(dirname "$current_dir")"
-result_dir="$parent_dir/result"
+# result_dir="$parent_dir/result"
 
-# Create the "result" directory if it doesn't exist
-mkdir -p "$result_dir"
+# # Create the "result" directory if it doesn't exist
+# mkdir -p "$result_dir"
 
-# Log file location
-log_file="$result_dir/test_camera_results.txt"
+# # Log file location
+# log_file="$result_dir/test_camera_results.txt"
 
 # Initialize test result variable
 test_result=""
@@ -23,7 +23,7 @@ STATUS_FAIL="FAIL"
 
 # Define logging function
 log() {
-    echo "$1" | tee -a "$log_file"
+    echo "$1"
 }
 
 # Colors
