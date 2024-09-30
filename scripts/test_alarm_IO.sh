@@ -32,7 +32,7 @@ export_gpio() {
 set_gpio_direction() {
     local gpio_pin="$1"
     local direction="$2"
-    log "Setting GPIO $gpio_pin direction to $direction"
+    # log "Setting GPIO $gpio_pin direction to $direction"
     if ! echo "$direction" > "/sys/class/gpio/gpio$gpio_pin/direction"; then
         log "/sys/class/gpio/gpio$gpio_pin/direction: No such file or directory"
         result=1

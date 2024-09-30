@@ -17,7 +17,7 @@ test_result="PASS"  # Default to PASS, will change to FAIL if any test fails
 
 # Define logging function
 log() {
-    echo "$1" | tee -a "$log_file"
+    echo "$1"
 }
 
 # Colors
