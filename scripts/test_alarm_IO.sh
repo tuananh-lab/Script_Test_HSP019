@@ -57,7 +57,6 @@ BOLD='\033[1m'
 NC='\033[0m' # No Color
 
 # Start testing
-log "Running test: test_alarm_IO"
 log "Testing Alarm IO"
 
 # Check GPIO pins and prepare them
