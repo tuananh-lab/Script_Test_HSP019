@@ -111,19 +111,7 @@ while true; do
     read -p "Enter your choice (1-3): " choice
 
     case $choice in
-        1) 
-            log "Select camera:"
-            log "1. Camera 0"
-            log "2. Camera 1"
-            read -p "Enter your choice (1-2): " camera_choice
-            if [[ "$camera_choice" == "1" ]]; then
-                test_camera 0
-            elif [[ "$camera_choice" == "2" ]]; then
-                test_camera 1
-            else
-                log "Invalid choice. Please select 1 or 2."
-            fi
-            ;;
+        1) test_camera 0 ;;
         2) test_two_cameras ;;
         3) log "Exiting..."; exit 0 ;;
         *) log "Invalid choice. Please select 1, 2, or 3." ;;
