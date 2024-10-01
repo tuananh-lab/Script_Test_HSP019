@@ -19,7 +19,7 @@ log() {
     echo "$1"
 }
 
-# Colors
+# Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BOLD='\033[1m'
@@ -27,9 +27,10 @@ NC='\033[0m' # No Color
 
 # Function to handle signal interruption
 handle_interrupt() {
-    log "Detected interruption (Ctrl+C)."
+    log "Detected interruption (Ctrl+C). Returning to camera selection."
     echo -e "Test result: ${GREEN}${BOLD}$STATUS_PASS${NC}"
-    exit 0
+    test_result="$STATUS_PASS"
+    return
 }
 
 # Trap the Ctrl+C signal
@@ -43,7 +44,7 @@ view_camera() {
 
     log "Viewing camera $camera_id to screen..."
     gst-launch-1.0 --gst-debug=2 qtiqmmfsrc camera=$camera_id name=camsrc ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! waylandsink fullscreen=true async=true sync=false
-    if [[ $? -ne 0 ]]; then
+    if [[ $? -ne 0 && "$test_result" != "$STATUS_PASS" ]]; then
         log "Camera view failed."
         test_result="$STATUS_FAIL"
     fi
@@ -58,7 +59,7 @@ record_camera() {
 
     log "Recording Stream from camera $camera_id: ${width}x${height}..."
     gst-launch-1.0 -e qtiqmmfsrc name=camsrc camera=$camera_id ! video/x-raw\(memory:GBM\),format=NV12,width=$width,height=$height,framerate=30/1 ! queue ! qtic2venc min-quant-i-frames=20 min-quant-p-frames=20 max-quant-i-frames=30 max-quant-p-frames=30 quant-i-frames=20 quant-p-frames=20 target-bitrate=6000000 ! queue ! h264parse ! mp4mux ! queue ! filesink location="$output_file"
-    if [[ $? -ne 0 ]]; then
+    if [[ $? -ne 0 && "$test_result" != "$STATUS_PASS" ]]; then
         log "Camera recording failed."
         test_result="$STATUS_FAIL"
     fi
@@ -66,6 +67,7 @@ record_camera() {
 
 # Sub-menu for testing single camera (view or record)
 test_camera() {
+    test_result="FAIL" 
     local camera_id=$1
     while true; do
         log "Testing Camera $camera_id"
