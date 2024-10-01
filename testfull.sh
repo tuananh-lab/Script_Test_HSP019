@@ -8,7 +8,7 @@ source "${current_dir}/scripts/common.sh"
 source "${current_dir}/scripts/error.sh"
 
 # Set log file and summary file locations
-log_file="${current_dir}/log.txt"  # Add this line to define log_file if it was missing
+log_file="${current_dir}/log.txt"
 summary_file="${current_dir}/file.txt"
 echo -n "" >"$log_file"
 echo -n "" >"$summary_file"

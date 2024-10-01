@@ -1,5 +1,5 @@
 #!/bin/bash
-log_file="file.log"
+log_file="log.txt"
 # Function to log messages
 log() {
     local log_msg="$1"
