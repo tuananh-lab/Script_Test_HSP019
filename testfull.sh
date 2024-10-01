@@ -88,7 +88,8 @@ test_scripts=(
     "test_alarm_IO.sh"
     "test_usb_type_a.sh"
     "test_reset_button.sh"
-    "test_camera.sh"
+    "test_camera0.sh"
+    "test_camera1.sh"
 )
 
 # Run all test scripts
