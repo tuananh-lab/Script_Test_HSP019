@@ -56,14 +56,19 @@ if [ "$initial_value" -ne 1 ]; then
     exit 1
 fi
 
-# Wait for user to press the reset button
-log "Please press the reset button and then press Enter."
-read -r
+# Wait for the reset button press (GPIO value should change to 0)
+log "Waiting for the reset button to be pressed..."
 
-# Read value after pressing the button (should be 0)
-pressed_value=$(cat "$gpio_path")
-log "GPIO value after pressing the button: $pressed_value"
+while true; do
+    pressed_value=$(cat "$gpio_path")
+    if [ "$pressed_value" -eq 0 ]; then
+        log "GPIO value after pressing the button: $pressed_value"
+        break
+    fi
+    sleep 0.1  # Poll every 100ms
+done
 
+# Check the final value
 if [ "$pressed_value" -ne 0 ]; then
     log "GPIO value after pressing the button is not 0. Check the button functionality."
     echo -e "Test result: ${RED}${BOLD}FAIL${NC}"
