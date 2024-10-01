@@ -48,9 +48,18 @@ view_camera() {
         test_result="$STATUS_PASS"
         echo -e "Test result: ${GREEN}${BOLD}$STATUS_PASS${NC}"
     else
+        log "Camera view failed or camera not available."
         test_result="$STATUS_FAIL"
+        echo -e "Test result: ${RED}${BOLD}$STATUS_FAIL${NC}"
     fi
 }
 
 # Automatically run the camera view without a menu
 view_camera 0 1920 1080
+
+# Exit with appropriate status code
+if [[ "$test_result" == "$STATUS_FAIL" ]]; then
+    exit 1
+else
+    exit 0
+fi
