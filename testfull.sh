@@ -8,7 +8,8 @@ source "${current_dir}/scripts/common.sh"
 source "${current_dir}/scripts/error.sh"
 
 # Set log file and summary file locations
-summary_file="${current_dir}/summary.txt"
+log_file="${current_dir}/log.txt"  # Add this line to define log_file if it was missing
+summary_file="${current_dir}/file.txt"
 echo -n "" >"$log_file"
 echo -n "" >"$summary_file"
 
@@ -21,6 +22,14 @@ NC='\033[0m' # No Color
 
 # Ensure all scripts have executable permissions
 chmod +x "${current_dir}/scripts/"*.sh
+
+# Function to handle Ctrl+C
+function ctrl_c() {
+    echo -e "\nCtrl+C pressed! Continuing tests unless aborted."
+}
+
+# Trap Ctrl+C and call ctrl_c function
+trap ctrl_c INT
 
 # Function to run each test and add a line separator
 run_test() {
