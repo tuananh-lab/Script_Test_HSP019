@@ -2,6 +2,7 @@
 
 # Initialize result variables
 test_result="PASS"  # Default to PASS, will change to FAIL if any test fails
+current_port=0  # Track the current port being tested
 
 # Define logging function
 log() {
@@ -13,6 +14,15 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
+
+# Handle Ctrl+C (SIGINT) signal
+trap 'handle_interrupt' SIGINT
+
+# Function to handle Ctrl+C (interrupt signal)
+handle_interrupt() {
+    echo -e "\nTest result: ${RED}${BOLD}FAIL${NC}"
+    exit 1
+}
 
 # Function to check USB information for a specific port
 check_usb_info() {
@@ -42,21 +52,34 @@ check_usb_info() {
     fi
 }
 
-# Function to test a specific port for a specific USB type
+# Function to test a specific port for a specific USB type with timeout
 test_port() {
     local port_num="$1"
     local usb_type="$2"
+    local timeout=10  # Set timeout to 10 seconds
+    local elapsed_time=0
+    local result=1  # Default to fail if no success
 
     echo "Please plug in USB $usb_type to Port $port_num"
-    log "Waiting for USB $usb_type to be detected on Port $port_num..."
+    current_port=$port_num  # Track the current port being tested
 
-    # Check repeatedly until the USB is plugged into the correct port
-    while : ; do
+    # Wait and check for a maximum of 10 seconds
+    while [ $elapsed_time -lt $timeout ]; do
         if check_usb_info "$usb_type" "$port_num"; then
+            result=0  # Test passed, exit loop
             break
         fi
         sleep 1  # Wait for 1 second before checking again
+        elapsed_time=$((elapsed_time + 1))
     done
+
+    if [ $result -ne 0 ]; then
+        # If USB is not detected or interrupted, report FAIL
+        echo -e "Test result for Port $port_num (USB $usb_type): ${RED}${BOLD}FAIL${NC}"
+        test_result="FAIL"  # Set global test result to FAIL
+    fi
+
+    return $result
 }
 
 # Main testing process
@@ -71,7 +94,6 @@ for port in {1..4}; do
 done
 
 # Test all ports for USB 3.0 next, one by one
-
 echo "Testing all ports for USB 3.0..."
 
 for port in {1..4}; do
